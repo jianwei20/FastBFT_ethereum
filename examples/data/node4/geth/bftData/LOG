@@ -1,6 +1,6 @@
-=============== Jan 5, 2019 (CST) ===============
-17:45:19.119765 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-17:45:19.119851 db@open opening
-17:45:19.123573 version@stat F·[] S·0B[] Sc·[]
-17:45:19.305082 db@janitor F·2 G·0
-17:45:19.305111 db@open done T·185.256031ms
+=============== Jan 6, 2019 (CST) ===============
+03:25:09.985038 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+03:25:09.986026 db@open opening
+03:25:10.277589 version@stat F·[] S·0B[] Sc·[]
+03:25:10.279357 db@janitor F·2 G·0
+03:25:10.279460 db@open done T·293.396611ms

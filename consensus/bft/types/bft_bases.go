@@ -476,7 +476,7 @@ func containsVote(s []*Vote, e *Vote) bool {
 func (lockset *LockSet) IsValid() bool {
 	log.Info("In IsValid()")
 	fmt.Println("len(lockset.Votes):", len(lockset.Votes), "lockset.EligibleVotesNum:", lockset.EligibleVotesNum)
-	if float64(len(lockset.Votes)) > 2/3.*float64(lockset.EligibleVotesNum) {
+	if float64(len(lockset.Votes)) > 4/5.*float64(lockset.EligibleVotesNum) {
 		lockset.hr() // check votes' validation
 		return true
 	}
@@ -493,7 +493,7 @@ func (lockset *LockSet) HasQuorum() (bool, common.Hash) {
 		return false, common.Hash{}
 	}
 	// fmt.Println("len(hs):", len(hs), "hs[0].count:", hs[0].count)
-	if float64(hs[0].count) > 2/3.0*float64(lockset.EligibleVotesNum) {
+	if float64(hs[0].count) > 4/5.0*float64(lockset.EligibleVotesNum) {
 		return true, hs[0].blockhash
 	} else {
 		return false, common.Hash{}
@@ -508,7 +508,7 @@ func (lockset *LockSet) NoQuorum() bool {
 	if len(hs) == 0 {
 		return true
 	}
-	if float64(hs[0].count) <= 2/3.*float64(lockset.EligibleVotesNum) {
+	if float64(hs[0].count) <= 4/5.*float64(lockset.EligibleVotesNum) {
 		return true
 	} else {
 		return false
@@ -605,11 +605,7 @@ func (lockset *LockSet) SignECDSA(prv *ecdsa.PrivateKey, hash common.Hash) (*Loc
 	return lockset.WithSignature(sig)
 }
 
-// func (lockset *Lockset) check() {
-// 'check either invalid or one of quorum, noquorum, quorumpossible'
-// }
 
-/////////////////////////////////////////////
 
 func GenesisSigningLockset(genesis *types.Block, prv *ecdsa.PrivateKey) *LockSet {
 	v := NewVote(0, 0, genesis.Hash(), 1)
@@ -793,7 +789,7 @@ func containsPrecommitVote(s []*PrecommitVote, e *PrecommitVote) bool {
 }
 
 func (lockset *PrecommitLockSet) IsValid() bool {
-	if float64(len(lockset.PrecommitVotes)) > 2/3.*float64(lockset.EligibleVotesNum) {
+	if float64(len(lockset.PrecommitVotes)) > 4/5.0*float64(lockset.EligibleVotesNum) {
 		lockset.hr() // check votes' validation
 		return true
 	}
@@ -808,7 +804,7 @@ func (lockset *PrecommitLockSet) HasQuorum() (bool, common.Hash) {
 	if len(hs) == 0 {
 		return false, common.Hash{}
 	}
-	if float64(hs[0].count) > 2/3.0*float64(lockset.EligibleVotesNum) {
+	if float64(hs[0].count) > 4/5.0*float64(lockset.EligibleVotesNum) {
 		return true, hs[0].blockhash
 	} else {
 		return false, common.Hash{}
