@@ -1,0 +1,332 @@
+INFO [01-02|20:09:29] Starting peer-to-peer node               instance=Geth/v1.6.7-unstable-9f307af7/darwin-amd64/go1.9.7
+INFO [01-02|20:09:29] Allocated cache and file handles         database=/Users/sujianwei20/Desktop/msigcode/examples/data/node4/geth/chaindata cache=128 handles=1024
+WARN [01-02|20:09:29] Upgrading chain database to use sequential keys 
+INFO [01-02|20:09:29] Initialised chain configuration          config="{ChainID: 2235 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Metropolis: <nil> Engine: ethash}"
+INFO [01-02|20:09:29] config bft is                            bft=true
+INFO [01-02|20:09:29] Database conversion successful 
+WARN [01-02|20:09:29] Upgrading db log bloom bins 
+INFO [01-02|20:09:29] Bloom-bin upgrade completed              elapsed=153.116µs
+INFO [01-02|20:09:29] Initialising Ethereum protocol           versions="[63 62]" network=2234
+INFO [01-02|20:09:29] Loaded most recent local header          number=0 hash=c97b85…f2ed18 td=1048576
+INFO [01-02|20:09:29] Loaded most recent local full block      number=0 hash=c97b85…f2ed18 td=1048576
+INFO [01-02|20:09:29] Loaded most recent local fast block      number=0 hash=c97b85…f2ed18 td=1048576
+INFO [01-02|20:09:29] in NewTxPool, call resetState 
+INFO [01-02|20:09:29] in NewTxPool, call pool.eventLoog() 
+INFO [01-02|20:09:29] Allocated cache and file handles         database=/Users/sujianwei20/Desktop/msigcode/examples/data/node4/geth/bftData   cache=128 handles=1024
+INFO [01-02|20:09:29] addVote to                               height=0 round=0 from=0x598443f1880ef585b21f1d7585bd0577402861e5 success=true cm.coinbase=0x598443f1880ef585b21f1d7585bd0577402861e5
+ready: 1 need: 4
+INFO [01-02|20:09:29] consensusManager not ready  
+ready: 1 need: 4
+INFO [01-02|20:09:29] Starting P2P networking 
+INFO [01-02|20:09:29] RLPx listener up                         self="enode://d9d5b902798f5c42901f3fd993e58a9fb2ded12c3996e2a3849d4fdfcd0c3516aa806f56d93a759278d1c92e88b0daccffc69312581544c9f680a13a2e556a9e@[::]:30306?discport=0"
+INFO [01-02|20:09:29] ---In BFTvalidatorCommitBlock--- 
+INFO [01-02|20:09:29] HTTP endpoint opened: http://127.0.0.1:8548 
+INFO [01-02|20:09:29] IPC endpoint opened: /Users/sujianwei20/Desktop/msigcode/examples/data/node4/geth.ipc 
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [125 87 122 89 123 39 66 180 152 203 92 240 194 108 220 215 38 211 158 110]
+INFO [01-02|20:09:29] send Ready msg 
+AddReady from: [125 87 122 89 123 39 66 180 152 203 92 240 194 108 220 215 38 211 158 110]
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [125 87 122 89 123 39 66 180 152 203 92 240 194 108 220 215 38 211 158 110]
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [125 87 122 89 123 39 66 180 152 203 92 240 194 108 220 215 38 211 158 110]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [125 87 122 89 123 39 66 180 152 203 92 240 194 108 220 215 38 211 158 110]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [125 87 122 89 123 39 66 180 152 203 92 240 194 108 220 215 38 211 158 110]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [125 87 122 89 123 39 66 180 152 203 92 240 194 108 220 215 38 211 158 110]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
+AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [125 87 122 89 123 39 66 180 152 203 92 240 194 108 220 215 38 211 158 110]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
+AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [19 203 184 217 156 108 78 15 39 40 199 215 38 6 231 138 41 196 226 36]
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [19 203 184 217 156 108 78 15 39 40 199 215 38 6 231 138 41 196 226 36]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [19 203 184 217 156 108 78 15 39 40 199 215 38 6 231 138 41 196 226 36]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [19 203 184 217 156 108 78 15 39 40 199 215 38 6 231 138 41 196 226 36]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [19 203 184 217 156 108 78 15 39 40 199 215 38 6 231 138 41 196 226 36]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [19 203 184 217 156 108 78 15 39 40 199 215 38 6 231 138 41 196 226 36]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [119 219 43 235 186 121 219 66 169 120 248 150 150 143 74 252 231 70 234 31]
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [119 219 43 235 186 121 219 66 169 120 248 150 150 143 74 252 231 70 234 31]
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [119 219 43 235 186 121 219 66 169 120 248 150 150 143 74 252 231 70 234 31]
+AddReady from: [119 219 43 235 186 121 219 66 169 120 248 150 150 143 74 252 231 70 234 31]
+INFO [01-02|20:09:29] send Ready msg 
+ready: 5 need: 4
+ready: 5 need: 4
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] -----------------consensusManager Ready------------------------- 
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [119 219 43 235 186 121 219 66 169 120 248 150 150 143 74 252 231 70 234 31]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [89 132 67 241 136 14 245 133 178 31 29 117 133 189 5 119 64 40 97 229]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [119 219 43 235 186 121 219 66 169 120 248 150 150 143 74 252 231 70 234 31]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [89 132 67 241 136 14 245 133 178 31 29 117 133 189 5 119 64 40 97 229]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [89 132 67 241 136 14 245 133 178 31 29 117 133 189 5 119 64 40 97 229]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [89 132 67 241 136 14 245 133 178 31 29 117 133 189 5 119 64 40 97 229]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [89 132 67 241 136 14 245 133 178 31 29 117 133 189 5 119 64 40 97 229]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [220 236 234 243 252 92 10 99 209 149 214 155 26 144 1 27 123 25 101 13]
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] send Ready msg 
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [220 236 234 243 252 92 10 99 209 149 214 155 26 144 1 27 123 25 101 13]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [220 236 234 243 252 92 10 99 209 149 214 155 26 144 1 27 123 25 101 13]
+INFO [01-02|20:09:29] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:29] ------Received ReadMsg------ 
+AddReady from: [220 236 234 243 252 92 10 99 209 149 214 155 26 144 1 27 123 25 101 13]
+AddReady from: [220 236 234 243 252 92 10 99 209 149 214 155 26 144 1 27 123 25 101 13]
+INFO [01-02|20:09:30] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:30] ------Received ReadMsg------ 
+AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
+INFO [01-02|20:09:30] send Ready msg 
+INFO [01-02|20:09:30] send Ready msg 
+INFO [01-02|20:09:30] send Ready msg 
+INFO [01-02|20:09:30] send Ready msg 
+INFO [01-02|20:09:30] send Ready msg 
+INFO [01-02|20:09:30] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:30] ------Received ReadMsg------ 
+AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
+INFO [01-02|20:09:30] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:30] ------Received ReadMsg------ 
+AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
+INFO [01-02|20:09:30] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:30] ------Received ReadMsg------ 
+AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
+INFO [01-02|20:09:30] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:30] ------Received ReadMsg------ 
+AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
+INFO [01-02|20:09:30] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:30] ------Received ReadMsg------ 
+AddReady from: [125 87 122 89 123 39 66 180 152 203 92 240 194 108 220 215 38 211 158 110]
+INFO [01-02|20:09:30] send Ready msg 
+INFO [01-02|20:09:30] send Ready msg 
+INFO [01-02|20:09:30] send Ready msg 
+INFO [01-02|20:09:30] send Ready msg 
+INFO [01-02|20:09:30] send Ready msg 
+INFO [01-02|20:09:30] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:30] ------Received ReadMsg------ 
+AddReady from: [125 87 122 89 123 39 66 180 152 203 92 240 194 108 220 215 38 211 158 110]
+INFO [01-02|20:09:30] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:30] ------Received ReadMsg------ 
+AddReady from: [125 87 122 89 123 39 66 180 152 203 92 240 194 108 220 215 38 211 158 110]
+INFO [01-02|20:09:30] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:30] ------Received ReadMsg------ 
+INFO [01-02|20:09:30] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:30] ------Received ReadMsg------ 
+AddReady from: [125 87 122 89 123 39 66 180 152 203 92 240 194 108 220 215 38 211 158 110]
+AddReady from: [125 87 122 89 123 39 66 180 152 203 92 240 194 108 220 215 38 211 158 110]
+INFO [01-02|20:09:30] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:30] ------Received ReadMsg------ 
+AddReady from: [19 203 184 217 156 108 78 15 39 40 199 215 38 6 231 138 41 196 226 36]
+INFO [01-02|20:09:30] send Ready msg 
+INFO [01-02|20:09:30] send Ready msg 
+INFO [01-02|20:09:30] send Ready msg 
+INFO [01-02|20:09:30] send Ready msg 
+INFO [01-02|20:09:30] send Ready msg 
+INFO [01-02|20:09:30] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:30] ------Received ReadMsg------ 
+AddReady from: [19 203 184 217 156 108 78 15 39 40 199 215 38 6 231 138 41 196 226 36]
+INFO [01-02|20:09:30] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:30] ------Received ReadMsg------ 
+INFO [01-02|20:09:30] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:30] ------Received ReadMsg------ 
+AddReady from: [19 203 184 217 156 108 78 15 39 40 199 215 38 6 231 138 41 196 226 36]
+AddReady from: [19 203 184 217 156 108 78 15 39 40 199 215 38 6 231 138 41 196 226 36]
+INFO [01-02|20:09:30] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:30] ------Received ReadMsg------ 
+AddReady from: [19 203 184 217 156 108 78 15 39 40 199 215 38 6 231 138 41 196 226 36]
+INFO [01-02|20:09:30] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:30] ------Received ReadMsg------ 
+AddReady from: [119 219 43 235 186 121 219 66 169 120 248 150 150 143 74 252 231 70 234 31]
+INFO [01-02|20:09:30] send Ready msg 
+INFO [01-02|20:09:30] send Ready msg 
+INFO [01-02|20:09:30] send Ready msg 
+INFO [01-02|20:09:30] send Ready msg 
+INFO [01-02|20:09:30] send Ready msg 
+INFO [01-02|20:09:30] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:30] ------Received ReadMsg------ 
+AddReady from: [119 219 43 235 186 121 219 66 169 120 248 150 150 143 74 252 231 70 234 31]
+INFO [01-02|20:09:30] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:30] ------Received ReadMsg------ 
+AddReady from: [119 219 43 235 186 121 219 66 169 120 248 150 150 143 74 252 231 70 234 31]
+INFO [01-02|20:09:30] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:30] ------Received ReadMsg------ 
+AddReady from: [119 219 43 235 186 121 219 66 169 120 248 150 150 143 74 252 231 70 234 31]
+INFO [01-02|20:09:30] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-02|20:09:30] ------Received ReadMsg------ 
+AddReady from: [119 219 43 235 186 121 219 66 169 120 248 150 150 143 74 252 231 70 234 31]
+INFO [01-02|20:09:48] Transaction pool price threshold updated price=18000000000
+INFO [01-02|20:09:48] Starting mining operation 
+INFO [01-02|20:09:48] ---atomic.LoadInt32(&self.mining) == 1 && work.tcount == 0--- 
+INFO [01-02|20:09:50] Handle BFT Msg,                          msg="msg #17 (107 bytes)"
+INFO [01-02|20:09:50] ------Received VoteMsg------ 
+voteHR: H: 1 R: 0 voteType:: 2 voteHash: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+cmHR: H: 1 R: 0
+INFO [01-02|20:09:50] --------------------------------------- 
+INFO [01-02|20:09:50] addVote to                               height=1 round=0 from=0x82a978b3f5962a5b0957d9ee9eef472ee55b42f1 success=true cm.coinbase=0x598443f1880ef585b21f1d7585bd0577402861e5
+INFO [01-02|20:09:50] ------in handle VoteMsg, success!------ 
+INFO [01-02|20:09:51] ---atomic.LoadInt32(&self.mining) == 1 && work.tcount == 0--- 
+INFO [01-02|20:09:54] ---atomic.LoadInt32(&self.mining) == 1 && work.tcount == 0--- 
+INFO [01-02|20:09:56] Handle BFT Msg,                          msg="msg #17 (107 bytes)"
+INFO [01-02|20:09:56] ------Received VoteMsg------ 
+voteHR: H: 1 R: 1 voteType:: 2 voteHash: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+cmHR: H: 1 R: 0
+INFO [01-02|20:09:56] --------------------------------------- 
+INFO [01-02|20:09:56] addVote to                               height=1 round=1 from=0x82a978b3f5962a5b0957d9ee9eef472ee55b42f1 success=true cm.coinbase=0x598443f1880ef585b21f1d7585bd0577402861e5
+INFO [01-02|20:09:56] ------in handle VoteMsg, success!------ 
+INFO [01-02|20:09:56] Handle BFT Msg,                          msg="msg #11 (22002 bytes)"
+INFO [01-02|20:09:56] -------Received NewBlockProposalMsg------- 
+bpHR: H: 1 R: 0
+cmHR: H: 1 R: 0
+INFO [01-02|20:09:56] --------------------------------------- 
+INFO [01-02|20:09:56] In IsValid() 
+len(lockset.Votes): 0 lockset.EligibleVotesNum: 0
+INFO [01-02|20:09:56] cm add BlockProposal                     h=1 r=0
+INFO [01-02|20:09:56] in HasQuorum 
+INFO [01-02|20:09:56] In IsValid() 
+len(lockset.Votes): 1 lockset.EligibleVotesNum: 0
+INFO [01-02|20:09:56] In addBlockCandidates!! 
+INFO [01-02|20:09:56] -------in handle NewBlockProposalMsg, success!------- 
+INFO [01-02|20:09:56] Handle BFT Msg,                          msg="msg #18 (345 bytes)"
+INFO [01-02|20:09:56] ------Received MsigProposalMsg------ 
+mpHR: H: 1 R: 0 hash: [80 165 165 84 250 105 0 208 172 147 19 187 108 52 2 200 225 57 248 129 228 252 7 54 103 114 108 18 239 144 220 2]
+cmHR: H: 1 R: 0
+INFO [01-02|20:09:56] --------------------------------------- 
+INFO [01-02|20:09:56] in MsigFinished 
+len(mp.Msig.MsigVs): 2 mp.MsigVs: [0 28]
+INFO [01-02|20:09:56] ------addmsigproposal success!------- 
+INFO [01-02|20:09:56] Handle BFT Msg,                          msg="msg #17 (107 bytes)"
+INFO [01-02|20:09:56] ------Received VoteMsg------ 
+voteHR: H: 1 R: 0 voteType:: 1 voteHash: [80 165 165 84 250 105 0 208 172 147 19 187 108 52 2 200 225 57 248 129 228 252 7 54 103 114 108 18 239 144 220 2]
+cmHR: H: 1 R: 0
+INFO [01-02|20:09:56] --------------------------------------- 
+INFO [01-02|20:09:56] addVote to                               height=1 round=0 from=0x7d577a597b2742b498cb5cf0c26cdcd726d39e6e success=true cm.coinbase=0x598443f1880ef585b21f1d7585bd0577402861e5
+INFO [01-02|20:09:56] ------in handle VoteMsg, success!------ 
+INFO [01-02|20:09:57] ---atomic.LoadInt32(&self.mining) == 1 && work.tcount == 0--- 
+INFO [01-02|20:10:00] ---atomic.LoadInt32(&self.mining) == 1 && work.tcount == 0--- 
+INFO [01-02|20:10:03] ---atomic.LoadInt32(&self.mining) == 1 && work.tcount == 0--- 
+INFO [01-02|20:10:05] Handle BFT Msg,                          msg="msg #17 (107 bytes)"
+INFO [01-02|20:10:05] ------Received VoteMsg------ 
+voteHR: H: 1 R: 1 voteType:: 1 voteHash: [80 165 165 84 250 105 0 208 172 147 19 187 108 52 2 200 225 57 248 129 228 252 7 54 103 114 108 18 239 144 220 2]
+cmHR: H: 1 R: 0
+INFO [01-02|20:10:05] --------------------------------------- 
+INFO [01-02|20:10:05] addVote to                               height=1 round=1 from=0x7d577a597b2742b498cb5cf0c26cdcd726d39e6e success=true cm.coinbase=0x598443f1880ef585b21f1d7585bd0577402861e5
+INFO [01-02|20:10:05] ------in handle VoteMsg, success!------ 
+INFO [01-02|20:10:06] Handle BFT Msg,                          msg="msg #17 (107 bytes)"
+INFO [01-02|20:10:06] ------Received VoteMsg------ 
+voteHR: H: 1 R: 2 voteType:: 2 voteHash: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+cmHR: H: 1 R: 0
+INFO [01-02|20:10:06] --------------------------------------- 
+INFO [01-02|20:10:06] addVote to                               height=1 round=2 from=0x82a978b3f5962a5b0957d9ee9eef472ee55b42f1 success=true cm.coinbase=0x598443f1880ef585b21f1d7585bd0577402861e5
+INFO [01-02|20:10:06] ------in handle VoteMsg, success!------ 
+INFO [01-02|20:10:06] ---atomic.LoadInt32(&self.mining) == 1 && work.tcount == 0--- 
+INFO [01-02|20:10:08] Handle BFT Msg,                          msg="msg #17 (107 bytes)"
+INFO [01-02|20:10:08] ------Received VoteMsg------ 
+voteHR: H: 1 R: 0 voteType:: 1 voteHash: [80 165 165 84 250 105 0 208 172 147 19 187 108 52 2 200 225 57 248 129 228 252 7 54 103 114 108 18 239 144 220 2]
+cmHR: H: 1 R: 0
+INFO [01-02|20:10:08] --------------------------------------- 
+INFO [01-02|20:10:08] addVote to                               height=1 round=0 from=0xdceceaf3fc5c0a63d195d69b1a90011b7b19650d success=true cm.coinbase=0x598443f1880ef585b21f1d7585bd0577402861e5
+INFO [01-02|20:10:08] ------in handle VoteMsg, success!------ 
+INFO [01-02|20:10:09] ---atomic.LoadInt32(&self.mining) == 1 && work.tcount == 0--- 
