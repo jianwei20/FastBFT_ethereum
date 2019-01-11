@@ -9,10 +9,9 @@ import (
 	"strconv"
 	"time"
 	//"ethclient/client"
+	"./client"
 	"encoding/json"
 	"math/big"
-
-	"./client"
 
 	ethcommon "github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
@@ -21,7 +20,7 @@ import (
 
 const (
 	// DefaultGasPrice int64  = 18000000000
-	DefaultGasPrice int64 = 1800000000
+	DefaultGasPrice int64 = 18000
 
 	// DefaultGasLimit is the gas of ether tx which should be 21000
 	DefaultGasLimit uint64 = 21000
@@ -73,7 +72,24 @@ var jsonString string = `{
 			   "7d25aa5cb8bdb467cf3f1851f7ab86dda27839531af3da877d799f0f836618dd",
 			   "a17fdea85604280718b7297839eb8ae951454202dc2cb716e78e7d9bf9273b34",
 			   "cb2f5e628cdee15c123e830118c7d13b01574cc189c41c58bfd486437504f78d",
-			   "7c3fb4537a2d1ae5afc003bccf4d7637a34986cc5b9a6fb843f58819b0767426"
+			   "7c3fb4537a2d1ae5afc003bccf4d7637a34986cc5b9a6fb843f58819b0767426",
+			   "8f0ebfeb68b1bc2b9854eab3cd0a0bc4624bfafc472aded60685d0bfd84b8a2f",
+			   "7d1ddebe5f851eecabbe6b377533124297dd40328abd4205984e44c0c978bbec",
+			   "85e3d4150664bc9c081543401d995c07ae9009697ba3f1d5834f0c56d6416513",
+			   "15c84b823c15191e9bf0576fb60fb31a7e2593dcd240e7cf2e4d6455eecce036",
+			   "298d1a16885165f237362187a28197556d9d8be0e8e24078aa48a93b59b55b52",
+			   "747e2741b4e36969478b0fd2edf29d8bdeaeef0a4eebb1963990ca45f6cb41cb",
+			   "1da3927b56b06fc87e9e4bd58efa8984c457ed23bfdadd396fcb5d173f53fedb"
+			   "d4dc384fea212e2e84448cbfb1d90b69e2863ed49746947ef14eec7ed255bb96",
+			   "d0c94184f494fe11973c373c80f8296e4c465e8a4630fe1f72bc0dbd9b9be812",
+			   "4cc45cab1de9dd83f82ef6c4b347c2ff5ea74c970e232d8e7d956c311d5a429a",
+			   "fda41db8bbad52c8f843ff65378c7d14ca75a995a6807472939e7d0e06f62d90",
+			   "979bf4e0677c5182fe1d01043736c7eac2284421673052027e2b2380b1ee48c5",
+			   "5a83502ea583439cccf091a988661102519ffde43671007f396dc8ae40ff8450",
+			   "f614b2fb404a964e89f051ded92fcbe2e5a976e16b380585baf78d1b4c8f9569",
+			   "f875077083de7ad7eb4aaec9aaf0168eb9d69a47498ab07a1a05bdc37079fabd",
+			   "e0f03306f1b4eaa7f19b17cdd00254b445dcab0801966c59e5e5338a1ecc1c44",
+			   "49b3bebb6c3ed031a554bff9afb6d796861fa82ab073cb32ee0ea6d59c1417b8"
 	],
 	"remiAddr":["0x5b52a95f0f47f7b58a5b4c092d12ae8953838526",
 				"0xc8d1bc936217e50d72b06b9dfc6d0006e8414d22",
@@ -90,8 +106,25 @@ var jsonString string = `{
 				"0x5b52a95f0f47f7b58a5b4c092d12ae8953838526",
 				"0xc8d1bc936217e50d72b06b9dfc6d0006e8414d22",
 				"0x5b52a95f0f47f7b58a5b4c092d12ae8953838526",
-				"0xc8d1bc936217e50d72b06b9dfc6d0006e8414d22"
-	],
+				"0xc8d1bc936217e50d72b06b9dfc6d0006e8414d22",
+                "0x5b52a95f0f47f7b58a5b4c092d12ae8953838526",
+				"0xc8d1bc936217e50d72b06b9dfc6d0006e8414d22",
+				"0x5b52a95f0f47f7b58a5b4c092d12ae8953838526",
+				"0xc8d1bc936217e50d72b06b9dfc6d0006e8414d22",
+				"0x5b52a95f0f47f7b58a5b4c092d12ae8953838526",
+				"0xc8d1bc936217e50d72b06b9dfc6d0006e8414d22",
+				"0x5b52a95f0f47f7b58a5b4c092d12ae8953838526",
+				"0xc8d1bc936217e50d72b06b9dfc6d0006e8414d22",
+				"0x5b52a95f0f47f7b58a5b4c092d12ae8953838526",
+				"0xc8d1bc936217e50d72b06b9dfc6d0006e8414d22",
+				"0x5b52a95f0f47f7b58a5b4c092d12ae8953838526",
+				"0xc8d1bc936217e50d72b06b9dfc6d0006e8414d22",
+				"0x5b52a95f0f47f7b58a5b4c092d12ae8953838526",
+				"0xc8d1bc936217e50d72b06b9dfc6d0006e8414d22",
+				"0x5b52a95f0f47f7b58a5b4c092d12ae8953838526",
+				"0xc8d1bc936217e50d72b06b9dfc6d0006e8414d22",
+            	"0x5b52a95f0f47f7b58a5b4c092d12ae8953838526"
+				],
 	"ipcPort": ["./data/node1/geth.ipc",
 				"./data/node2/geth.ipc",
 				"./data/node3/geth.ipc",
@@ -107,7 +140,24 @@ var jsonString string = `{
 				"./data/node13/geth.ipc",
 				"./data/node14/geth.ipc",
 				"./data/node15/geth.ipc",
-				"./data/node16/geth.ipc"
+				"./data/node16/geth.ipc",
+                "./data/node17/geth.ipc",
+				"./data/node18/geth.ipc",
+				"./data/node19/geth.ipc",
+				"./data/node20/geth.ipc",
+				"./data/node21/geth.ipc",
+				"./data/node22/geth.ipc",
+				"./data/node23/geth.ipc",
+				"./data/node24/geth.ipc",
+				"./data/node25/geth.ipc",
+				"./data/node26/geth.ipc",
+				"./data/node27/geth.ipc",
+				"./data/node28/geth.ipc",
+				"./data/node29/geth.ipc",
+				"./data/node30/geth.ipc",
+				"./data/node31/geth.ipc",
+				"./data/node32/geth.ipc",
+				"./data/node33/geth.opc"
 	],
 	"txCounts":10000
 }`
@@ -199,7 +249,7 @@ func main() {
 	//		clients[c] := makeClient(SenderPrivateKey[i], IpcPorts[i])
 	//	}
 
-	for test := 0; test < 50; test++ {
+	for test := 0; test < 10; test++ {
 		for i := 0; i < NodesNum; i++ {
 			client, from := makeClient(SenderPrivateKey[i], IpcPorts[i])
 			txs = makeTxs(txCount, from, RemitteeAddress[i], currentNonce)

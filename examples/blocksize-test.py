@@ -44,7 +44,7 @@ def main():
 
     rootPath = './nodeConfig/blocksize/200to2000'
     genesisLst = getGenesis(rootPath)
-    nodesNum = [4,8,16]
+    nodesNum = [32]
     if testType=="blocksize":
         for nodes in nodesNum:
             runEx(server, nodes, genesisLst, nodeIndex, dirName, nodeType)

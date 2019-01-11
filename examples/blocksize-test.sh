@@ -14,7 +14,7 @@ if [ ${5} == "normal" ];then
 	./sendtx.sh ${1} ${2} ${4}
 	sleep 120.0
 	./run-miner.sh ${1} ${2} ${4}
-	sleep 20.0
+	sleep 3.0
 
 elif [ ${5} == "byzantine" ];then
 	./setupEnv.sh ${1} ${2} ${4}
