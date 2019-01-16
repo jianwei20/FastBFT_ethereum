@@ -1269,6 +1269,9 @@ func (mp *MsigProposal) Msign(prv *ecdsa.PrivateKey, addr common.Address) error 
 func (mp *MsigProposal) MsigFinished(msigProposers []common.Address) bool {
 	log.Info("in MsigFinished")
 	fmt.Println("len(mp.Msig.MsigVs):", len(mp.Msig.MsigVs), "mp.MsigVs:", mp.Msig.MsigVs)
+
+	fmt.Println("len(mp.Msig.MsigVs)=",len(mp.Msig.MsigVs),"len(msigProposers)= ",len(msigProposers))
+
 	if len(mp.Msig.MsigVs) != len(msigProposers)+1 {
 		log.Info("dont have enough msigs")
 		return false

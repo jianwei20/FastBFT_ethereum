@@ -60,5 +60,6 @@ var keys = ["./keys/UTC--2019-01-09T07-56-23.011188000Z--67f4b5d2ec6107626624a25
 
 
 var password = '1234'
-ConvertKeyFile(keys, password)
+//ConvertKeyFile(keys, password)
 
+console.log(fs.readFileSync(keys[0]))
