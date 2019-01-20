@@ -1,3 +1,13 @@
 #!/bin/bash
+echo "-------In init1.sh--------"
 
-—datadir “” init genesis.json
+rm -rf ./data1
+rm ./data1/*.log
+
+
+for ((i=1;i<=${1};i++));
+do 
+
+../build/bin/geth --datadir "data1/node${i}" init genesis.json
+
+done

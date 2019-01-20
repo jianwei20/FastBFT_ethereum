@@ -1,121 +1,15 @@
-Address: {fdbed5e3ed0d7d46165b216215fc680f04ef36ee}
-Address: {d6e79346eaab86fefeff49a951bdf39e88679613}
-Address: {7cf4b6d73397f52977ffe215274ad1bd48d78e93}
-Address: {df59c61198a6fe74ad69fdb24132089541bd79ae}
-Address: {4bd2d5613aa3624de45a6b9df0840fc281bf24a4}
-Address: {ccb48bed92851672bdb661f555debd407a61da71}
-Address: {842ae0ce12bf648fcd6198d02b289a303a37c6f8}
-Address: {bb808db02f47c1c10816f966f16d39e308aaf983}
-Address: {a115a14b97beb06da0f6ad49dbbbe6ef222473c9}
-Address: {d37e4148ce0031283f46fb1f22f50c1d4fd53db6}
-Incorrect Usage: bad flag syntax: ----datadir
-
-new [command options] [arguments...]
-
-    geth account new
-
-Creates a new account and prints the address.
-
-The account is saved in encrypted format, you are prompted for a passphrase.
-
-You must remember this passphrase to unlock your account in the future.
-
-For non-interactive use the passphrase can be specified with the --password flag:
-
-Note, this is meant to be used for testing only, it is a bad idea to save your
-password to file or expose in any other way.
-
-
-ETHEREUM OPTIONS:
-  --datadir "/Users/sujianwei20/Library/Ethereum"  Data directory for the databases and keystore
-  --keystore                                       Directory for the keystore (default = inside the datadir)
-  --lightkdf                                       Reduce key-derivation RAM & CPU usage at some expense of KDF strength
-
-ACCOUNT OPTIONS:
-  --password value  Password file to use for non-inteactive password input
-
-Incorrect Usage: bad flag syntax: ----datadir
-
-new [command options] [arguments...]
-
-    geth account new
-
-Creates a new account and prints the address.
-
-The account is saved in encrypted format, you are prompted for a passphrase.
-
-You must remember this passphrase to unlock your account in the future.
-
-For non-interactive use the passphrase can be specified with the --password flag:
-
-Note, this is meant to be used for testing only, it is a bad idea to save your
-password to file or expose in any other way.
-
-
-ETHEREUM OPTIONS:
-  --datadir "/Users/sujianwei20/Library/Ethereum"  Data directory for the databases and keystore
-  --keystore                                       Directory for the keystore (default = inside the datadir)
-  --lightkdf                                       Reduce key-derivation RAM & CPU usage at some expense of KDF strength
-
-ACCOUNT OPTIONS:
-  --password value  Password file to use for non-inteactive password input
-
-Incorrect Usage: bad flag syntax: ----datadir
-
-new [command options] [arguments...]
-
-    geth account new
-
-Creates a new account and prints the address.
-
-The account is saved in encrypted format, you are prompted for a passphrase.
-
-You must remember this passphrase to unlock your account in the future.
-
-For non-interactive use the passphrase can be specified with the --password flag:
-
-Note, this is meant to be used for testing only, it is a bad idea to save your
-password to file or expose in any other way.
-
-
-ETHEREUM OPTIONS:
-  --datadir "/Users/sujianwei20/Library/Ethereum"  Data directory for the databases and keystore
-  --keystore                                       Directory for the keystore (default = inside the datadir)
-  --lightkdf                                       Reduce key-derivation RAM & CPU usage at some expense of KDF strength
-
-ACCOUNT OPTIONS:
-  --password value  Password file to use for non-inteactive password input
-
-Address: {15e6c042b1c804bda44b9e889a7eb11cb78d4145}
-Address: {3f6c5f2429f391156f4b0384856743d3f5a9dc35}
-Address: {64a5423d03375057bf730833e6518f40d269b514}
-Address: {99552564f992dbda61dbef0a8414be50294a53e6}
-Address: {3cad5d31c958da6c9f9cfa046fb228f2931d2539}
-Address: {75a960e5af05f49fb5c6029ee0f6e43381217625}
-Address: {a058eee2d0e8d34be91562f6c654a24f125fb272}
-Address: {120cb9f2eb50afd369e4fefdfec79e8910a54037}
-Address: {ed5fa6119354438d8c9d1906a72c1b23f881bb66}
-Address: {00498844862cfecdc54f4a90ba33720f458654fe}
-Address: {ab2eaf79db318fc5b204d4a828604df3643975d0}
-Address: {3b5811abfa302d0cc51180ac66201253684d12d4}
-Address: {a06ec58a22a16bea0b7de1feba1963801735321c}
-Address: {0743b46eb3a1bb0108990ed9f86a787b0b321571}
-Address: {b6fa1c5b30b7cf60e642235c834a3f1da3510a98}
-Address: {2818f007940ae736bd6e00d550d575b9a410f37d}
-Address: {00a9f4d7429ef129e991f1d0709b91b1223d409f}
-Address: {ae37855e6adcce718d09814f5995c8a3f96d6446}
-Address: {ec441dbf7e9891631a309a475988a6ff917a5b4c}
-Address: {65b2da33f4eadbb79d6103cf6d54f31604b8207d}
-Address: {5a0e534e58c530583d8d88dfc85be106eed5166b}
-Address: {3042f03a9ecfccd51bd1b82c4c66e5ad742cc379}
-Address: {6ed540fad6ea991bc57153fd013ae672fa1122dc}
-Address: {143d5c6ba708aeafc938e61723a32709f3b7c0a3}
-Address: {fdd73ba2577e1d681ec5f864825bf5e25bca6852}
-Address: {2a6ff1989f153eb71a92e32b2404aa0628030f6e}
-Address: {7cff49a38d943996d7413b26f8d6e8dba1363b26}
-Address: {b94c9538e3b523125ae7799381d3dd3c7ec86720}
-Address: {b33735f03a723d566e0e078a0a04c8f56fbf57d4}
-Address: {8a11553cc4a0746e3c2ef22508f3e125941a3f67}
-Address: {64d118f59975c5b48f49653562b8f812c652e510}
-Address: {056462d75ff8d64283a5a095d6c61632319b02ce}
-Address: {d1d1c12900a3876b45562450f19651920931d27a}
+0xf0e0c3e97de1e090e19f31797efbc04595e9e799
+0x15a4cd4d5f0413d2192e91a8b5db4011f49a29ab
+0x5d21e1b48a9d4938c573a4380749d146c17e9cf9
+0x3c3bbb6b31159c54ee1af3fdccac8cbb89b7ea0d
+0x2cf51933f1abb1e1711f85109dd7223202c12cef
+0x28100a6b56cf738a3511125305a3ac926922e084
+0x051a6166167a33de173882943dc4f459d4ee9915
+0x2194b520782506984adad7ae9f4fdac262d1dc85
+0x9e4819be37e3c899ec9bbbf2f30d4019e251086c
+0xad233cfdcb50f25a7a50defbc6e382ebce644e91
+0xa0fc612e4e5b93bf9edec285b804c1a58012b099
+0x3d6982df543ffd778563867a69b066ebd84dab74
+0x5773c79de50e746d54fac9937e6739b6de9b3057
+0x2ca4f34152aa976d748214cd91f0ecd7e3cdd2e0
+0x179fdae81310b7e7df0f9501a063a61ec6fcd859

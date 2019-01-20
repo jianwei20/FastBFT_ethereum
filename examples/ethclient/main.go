@@ -231,6 +231,25 @@ func sendTxs(client client.EthClient, txs []*ethtypes.Transaction) {
 }
 
 func main() {
+	var add string
+	userFile := "../writejson.json"
+	fl, err := os.Open(userFile)
+	if err != nil {
+		fmt.Println(userFile, err)
+		return
+	}
+	defer fl.Close()
+	buf := make([]byte, 1024)
+	for {
+		n, _ := fl.Read(buf)
+		if 0 == n {
+			break
+		}
+		add += string(buf[:n])
+		//fmt.Println(string(buf[:n]))
+	}
+	jsonString = add
+	fmt.Println(jsonString)
 	fmt.Println("------start sendtx------")
 	txConf := initConf()
 	var txs []*ethtypes.Transaction

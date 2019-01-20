@@ -1,0 +1,22 @@
+WARN [01-20|19:01:38] No etherbase set and no accounts found as default 
+INFO [01-20|19:01:39] Starting peer-to-peer node               instance=Geth/v1.6.7-unstable-5c3a2bf5/darwin-amd64/go1.9.7
+INFO [01-20|19:01:39] Allocated cache and file handles         database=/Users/sujianwei20/Desktop/FastBFT_ethereum/examples/data/node1/geth/chaindata cache=128 handles=1024
+WARN [01-20|19:01:39] Upgrading chain database to use sequential keys 
+INFO [01-20|19:01:39] Database conversion successful 
+INFO [01-20|19:01:39] Initialised chain configuration          config="{ChainID: 2235 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Metropolis: <nil> Engine: ethash}"
+INFO [01-20|19:01:39] config bft is                            bft=true
+WARN [01-20|19:01:39] Upgrading db log bloom bins 
+INFO [01-20|19:01:39] Bloom-bin upgrade completed              elapsed=143.471µs
+INFO [01-20|19:01:39] Initialising Ethereum protocol           versions="[63 62]" network=2234
+INFO [01-20|19:01:39] Loaded most recent local header          number=0 hash=c97b85…f2ed18 td=1048576
+INFO [01-20|19:01:39] Loaded most recent local full block      number=0 hash=c97b85…f2ed18 td=1048576
+INFO [01-20|19:01:39] Loaded most recent local fast block      number=0 hash=c97b85…f2ed18 td=1048576
+INFO [01-20|19:01:39] in NewTxPool, call resetState 
+INFO [01-20|19:01:39] in NewTxPool, call pool.eventLoog() 
+INFO [01-20|19:01:39] Allocated cache and file handles         database=/Users/sujianwei20/Desktop/FastBFT_ethereum/examples/data/node1/geth/bftData   cache=128 handles=1024
+INFO [01-20|19:01:39] addVote to                               height=0 round=0 from=0x82a978b3f5962a5b0957d9ee9eef472ee55b42f1 success=true cm.coinbase=0x82a978b3f5962a5b0957d9ee9eef472ee55b42f1
+ready: 1 need: 2.6666667
+INFO [01-20|19:01:39] consensusManager not ready  
+ready: 1 need: 2.6666667
+INFO [01-20|19:01:39] Starting P2P networking 
+Fatal: Error starting protocol stack: listen tcp :30303: bind: address already in use

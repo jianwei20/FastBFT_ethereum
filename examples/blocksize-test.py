@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+!/usr/bin/env python3
 from pprint import pprint
 from os import walk, system
 from sys import argv
