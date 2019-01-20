@@ -4,6 +4,7 @@ rm -rf newkey
 rm Address.txt
 rm Key.txt
 rm publicKey.txt
+rm publicKey1.txt
 echo "-------run geth ---------"
 
 for ((i<0;i<${1};i++));
@@ -25,7 +26,10 @@ echo "-------go build ethclient-----------"
 go build ethclient/main.go
 
 echo "setupEnv"
-./setupEnv2.sh local $1 0
+./setupEnv2.sh local ${1} 0
+chmod -R +x nodeConfig1/${1}nodes *
+python writeStaticNodeJson.py ${1}
+
 
 
 
