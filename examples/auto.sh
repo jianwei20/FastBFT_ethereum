@@ -5,6 +5,8 @@ rm Address.txt
 rm Key.txt
 rm publicKey.txt
 rm publicKey1.txt
+
+./stop.sh
 echo "-------run geth ---------"
 
 for ((i<0;i<${1};i++));
@@ -29,10 +31,17 @@ echo "setupEnv"
 ./setupEnv2.sh local ${1} 0
 chmod -R +x nodeConfig1/${1}nodes *
 python writeStaticNodeJson.py ${1}
+echo "cp static-node.json"
 
 
+for ((i=1;i<${1}+1;i++));
+do 
+ cp -r nodeConfig1/${1}nodes/static-nodes.json  ./data1/node$i
+done
+chmod +x start1.sh
+./start1.sh local ${1} 0
 
-
+./sendtx1.sh local ${1} 0
 
 
 

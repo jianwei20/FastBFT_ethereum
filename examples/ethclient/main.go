@@ -232,7 +232,7 @@ func sendTxs(client client.EthClient, txs []*ethtypes.Transaction) {
 
 func main() {
 	var add string
-	userFile := "../writejson.json"
+	userFile := "writejson.json"
 	fl, err := os.Open(userFile)
 	if err != nil {
 		fmt.Println(userFile, err)

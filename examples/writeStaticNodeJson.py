@@ -6,7 +6,7 @@ def main():
     ipcportnumber=1
     f = open("PublicKey1.txt")             # 返回一个文件对象
     line = f.read().splitlines()
-    print line
+    #print line
     x=30303
     for i in line:
         enode.append("enode://"+str(i)+"@[::]:"+str(x)+"?discport=0")

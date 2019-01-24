@@ -24,3 +24,4 @@ done
 rm node*.sh
 cp nodeConfig1/${2}nodes/*.sh ./
 
+
