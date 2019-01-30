@@ -36,18 +36,35 @@ go build ethclient/main.go
 echo "setupEnv"
 ./setupEnv2.sh local ${1} 0
 chmod -R +x nodeConfig1/${1}nodes *
-python writeStaticNodeJson.py ${1}
+#python writeStaticNodeJson.py ${1}
+
+chmod +x start1.sh
+./start1.sh local ${1} 0
+
+
+
+sleep 20.0
+
 echo "cp static-node.json"
+./getenode.sh ${1}
 
 
 for ((i=1;i<${1}+1;i++));
 do 
- cp -r nodeConfig1/${1}nodes/static-nodes.json  ./data1/node$i
+cp -r ./static-nodes.json  ./data1/node$i
+chmod -R +x ./data1/node$i/static-nodes.json
 done
-chmod +x start1.sh
-./start1.sh local ${1} 0
 chmod +x sendtx1.sh
-./sendtx1.sh local ${1} 
+
+sleep 20.0
+
+./sendtx1.sh local ${1}
+./stop.sh
+
+./start1.sh local ${1} 0
+sleep 20.0
+./run-miner.sh local ${1}
+
 
 
 

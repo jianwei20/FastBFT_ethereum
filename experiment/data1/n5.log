@@ -1,0 +1,121 @@
+INFO [01-31|03:21:55] Starting peer-to-peer node               instance=Geth/v1.6.7-unstable-deaaed87/darwin-amd64/go1.9.6
+INFO [01-31|03:21:55] Allocated cache and file handles         database=/Users/jianweisu/Desktop/Ethereum/FastBFT_ethereum/experiment/data1/node5/geth/chaindata cache=128 handles=1024
+WARN [01-31|03:21:55] Upgrading chain database to use sequential keys 
+INFO [01-31|03:21:55] Initialised chain configuration          config="{ChainID: 2235 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Metropolis: <nil> Engine: ethash}"
+INFO [01-31|03:21:55] config bft is                            bft=true
+WARN [01-31|03:21:55] Upgrading db log bloom bins 
+INFO [01-31|03:21:55] Bloom-bin upgrade completed              elapsed=228.753µs
+INFO [01-31|03:21:55] Initialising Ethereum protocol           versions="[63 62]" network=2234
+INFO [01-31|03:21:55] Database conversion successful 
+INFO [01-31|03:21:55] Loaded most recent local header          number=0 hash=58d768…307fbc td=1048576
+INFO [01-31|03:21:55] Loaded most recent local full block      number=0 hash=58d768…307fbc td=1048576
+INFO [01-31|03:21:55] Loaded most recent local fast block      number=0 hash=58d768…307fbc td=1048576
+INFO [01-31|03:21:55] in NewTxPool, call resetState 
+INFO [01-31|03:21:55] in NewTxPool, call pool.eventLoog() 
+INFO [01-31|03:21:55] Allocated cache and file handles         database=/Users/jianweisu/Desktop/Ethereum/FastBFT_ethereum/experiment/data1/node5/geth/bftData   cache=128 handles=1024
+INFO [01-31|03:21:55] addVote to                               height=0 round=0 from=0x13cbb8d99c6c4e0f2728c7d72606e78a29c4e224 success=true cm.coinbase=0x13cbb8d99c6c4e0f2728c7d72606e78a29c4e224
+ready: 1 need: 3.3333333
+INFO [01-31|03:21:55] consensusManager not ready  
+ready: 1 need: 3.3333333
+INFO [01-31|03:21:55] Starting P2P networking 
+INFO [01-31|03:21:55] RLPx listener up                         self="enode://ae6aee36993a5b48cf3a36a6cf10cf5e767e56e253d232f8462a4b74ee3374d097740441cc12f6e05154d9649c18faa084a73bc5f3abc370173a9c87d3430e7b@[::]:30307?discport=0"
+INFO [01-31|03:21:55] ---In BFTvalidatorCommitBlock--- 
+INFO [01-31|03:21:55] IPC endpoint opened: /Users/jianweisu/Desktop/Ethereum/FastBFT_ethereum/experiment/data1/node5/geth.ipc 
+INFO [01-31|03:21:55] HTTP endpoint opened: http://127.0.0.1:8549 
+ready: 1 need: 3.3333333
+INFO [01-31|03:21:56] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:21:56] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:21:57] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:21:57] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:21:58] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:21:58] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:21:59] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:21:59] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:22:00] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:22:00] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:22:01] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:22:01] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:22:02] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:22:02] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:22:03] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:22:03] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:22:04] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:22:04] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:22:05] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:22:05] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:22:06] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:22:06] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:22:07] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:22:07] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:22:08] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:22:08] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:22:09] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:22:09] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:22:10] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:22:10] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:22:11] consensusManager not ready  
+ready: 1 need: 3.3333333
+ready: 1 need: 3.3333333
+INFO [01-31|03:22:11] consensusManager not ready  
+ready: 1 need: 3.3333333
+./node5.sh: line 1: 76289 Terminated: 15          ../build/bin/geth --networkid 2234 --port 30307 --rpcport 8549 --datadir "data1/node5" --nodiscover --rpc --rpccorsdomain "*" --rpcapi "eth,net,web3,debug" --bft --allow-empty --num-validators 5 --node-num 4

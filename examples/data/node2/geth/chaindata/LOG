@@ -1,16 +1,16 @@
 =============== Jan 30, 2019 (CST) ===============
-17:29:43.490957 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-17:29:43.492022 db@open opening
-17:29:43.493098 version@stat F·[] S·0B[] Sc·[]
-17:29:43.493840 db@janitor F·2 G·0
-17:29:43.493903 db@open done T·1.835815ms
+22:04:02.776534 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+22:04:02.777162 db@open opening
+22:04:02.777816 version@stat F·[] S·0B[] Sc·[]
+22:04:02.778439 db@janitor F·2 G·0
+22:04:02.778504 db@open done T·1.299744ms
 =============== Jan 30, 2019 (CST) ===============
-17:29:45.982185 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-17:29:45.982604 version@stat F·[] S·0B[] Sc·[]
-17:29:45.982648 db@open opening
-17:29:45.982872 journal@recovery F·1
-17:29:45.985598 journal@recovery recovering @1
-17:29:45.989515 memdb@flush created L0@2 N·628 S·51KiB "\x02d\xfc..\x19Ba,v434":"\xfe\x88\xcf..H\xef\xcc,v363"
-17:29:45.992506 version@stat F·[1] S·51KiB[51KiB] Sc·[0.25]
-17:29:45.994004 db@janitor F·3 G·0
-17:29:45.994072 db@open done T·11.395133ms
+22:04:06.018454 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+22:04:06.018907 version@stat F·[] S·0B[] Sc·[]
+22:04:06.018960 db@open opening
+22:04:06.019105 journal@recovery F·1
+22:04:06.033275 journal@recovery recovering @1
+22:04:06.037328 memdb@flush created L0@2 N·628 S·51KiB "\x02d\xfc..\x19Ba,v434":"\xfe\x88\xcf..H\xef\xcc,v363"
+22:04:06.058150 version@stat F·[1] S·51KiB[51KiB] Sc·[0.25]
+22:04:06.059700 db@janitor F·3 G·0
+22:04:06.059751 db@open done T·40.763237ms

@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-
-# -*- coding: utf-8 -*-
 import json
 
 
@@ -35,9 +33,9 @@ def main():
   with open('genesis.json', 'r') as f:
     data = json.load(f)
     #print line
-  
+
     #print data['alloc']
-   
+
     f = open("Address.txt")             # 返回一个文件对象
     line = f.read().splitlines()
     test=line

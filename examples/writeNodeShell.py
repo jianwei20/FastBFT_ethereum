@@ -22,7 +22,7 @@ def nsfile(s):
 --networkid 2234 \
 --port '+str(30302+i)+' \
 --rpcport '+str(8544+i)+' \
---datadir "data1/node"'+str(i)+'\
+--datadir "data1/node'+str(i)+'"'+'\
 --nodiscover \
 \
 --rpc \

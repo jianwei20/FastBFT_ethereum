@@ -1,107 +1,534 @@
-INFO [01-30|17:29:46] Starting peer-to-peer node               instance=Geth/v1.6.7-unstable-deaaed87/darwin-amd64/go1.9.6
-INFO [01-30|17:29:46] Allocated cache and file handles         database=/Users/jianweisu/Desktop/Ethereum/FastBFT_ethereum/examples/data/node4/geth/chaindata cache=128 handles=1024
-WARN [01-30|17:29:46] Upgrading chain database to use sequential keys 
-INFO [01-30|17:29:46] Database conversion successful 
-INFO [01-30|17:29:46] Initialised chain configuration          config="{ChainID: 2235 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Metropolis: <nil> Engine: ethash}"
-INFO [01-30|17:29:46] config bft is                            bft=true
-WARN [01-30|17:29:46] Upgrading db log bloom bins 
-INFO [01-30|17:29:46] Bloom-bin upgrade completed              elapsed=95.747µs
-INFO [01-30|17:29:46] Initialising Ethereum protocol           versions="[63 62]" network=2234
-INFO [01-30|17:29:46] Loaded most recent local header          number=0 hash=c97b85…f2ed18 td=1048576
-INFO [01-30|17:29:46] Loaded most recent local full block      number=0 hash=c97b85…f2ed18 td=1048576
-INFO [01-30|17:29:46] Loaded most recent local fast block      number=0 hash=c97b85…f2ed18 td=1048576
-INFO [01-30|17:29:46] in NewTxPool, call resetState 
-INFO [01-30|17:29:46] in NewTxPool, call pool.eventLoog() 
-INFO [01-30|17:29:46] Allocated cache and file handles         database=/Users/jianweisu/Desktop/Ethereum/FastBFT_ethereum/examples/data/node4/geth/bftData   cache=128 handles=1024
-INFO [01-30|17:29:46] addVote to                               height=0 round=0 from=0x598443f1880ef585b21f1d7585bd0577402861e5 success=true cm.coinbase=0x598443f1880ef585b21f1d7585bd0577402861e5
+INFO [01-30|17:52:44] Starting peer-to-peer node               instance=Geth/v1.6.7-unstable-deaaed87/darwin-amd64/go1.9.6
+INFO [01-30|17:52:44] Allocated cache and file handles         database=/Users/jianweisu/Desktop/Ethereum/FastBFT_ethereum/examples/data/node4/geth/chaindata cache=128 handles=1024
+WARN [01-30|17:52:44] Upgrading chain database to use sequential keys 
+INFO [01-30|17:52:44] Database conversion successful 
+INFO [01-30|17:52:44] Initialised chain configuration          config="{ChainID: 2235 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Metropolis: <nil> Engine: ethash}"
+INFO [01-30|17:52:44] config bft is                            bft=true
+WARN [01-30|17:52:44] Upgrading db log bloom bins 
+INFO [01-30|17:52:44] Bloom-bin upgrade completed              elapsed=128.88µs
+INFO [01-30|17:52:44] Initialising Ethereum protocol           versions="[63 62]" network=2234
+INFO [01-30|17:52:44] Loaded most recent local header          number=0 hash=c97b85…f2ed18 td=1048576
+INFO [01-30|17:52:44] Loaded most recent local full block      number=0 hash=c97b85…f2ed18 td=1048576
+INFO [01-30|17:52:44] Loaded most recent local fast block      number=0 hash=c97b85…f2ed18 td=1048576
+INFO [01-30|17:52:44] in NewTxPool, call resetState 
+INFO [01-30|17:52:44] in NewTxPool, call pool.eventLoog() 
+INFO [01-30|17:52:44] Allocated cache and file handles         database=/Users/jianweisu/Desktop/Ethereum/FastBFT_ethereum/examples/data/node4/geth/bftData   cache=128 handles=1024
+INFO [01-30|17:52:44] addVote to                               height=0 round=0 from=0x598443f1880ef585b21f1d7585bd0577402861e5 success=true cm.coinbase=0x598443f1880ef585b21f1d7585bd0577402861e5
+INFO [01-30|17:52:44] Starting P2P networking 
+INFO [01-30|17:52:44] ---In BFTvalidatorCommitBlock--- 
 ready: 1 need: 2.6666667
-INFO [01-30|17:29:46] consensusManager not ready  
+INFO [01-30|17:52:44] consensusManager not ready  
 ready: 1 need: 2.6666667
-INFO [01-30|17:29:46] Starting P2P networking 
-INFO [01-30|17:29:46] RLPx listener up                         self="enode://d9d5b902798f5c42901f3fd993e58a9fb2ded12c3996e2a3849d4fdfcd0c3516aa806f56d93a759278d1c92e88b0daccffc69312581544c9f680a13a2e556a9e@[::]:30306?discport=0"
-INFO [01-30|17:29:46] ---In BFTvalidatorCommitBlock--- 
-INFO [01-30|17:29:46] IPC endpoint opened: /Users/jianweisu/Desktop/Ethereum/FastBFT_ethereum/examples/data/node4/geth.ipc 
-INFO [01-30|17:29:46] HTTP endpoint opened: http://127.0.0.1:8548 
-INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
-INFO [01-30|17:29:46] ------Received ReadMsg------ 
-INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
-INFO [01-30|17:29:46] ------Received ReadMsg------ 
-INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
-INFO [01-30|17:29:46] ------Received ReadMsg------ 
-AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
-INFO [01-30|17:29:46] send Ready msg 
-INFO [01-30|17:29:46] send Ready msg 
-AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
-INFO [01-30|17:29:46] send Ready msg 
-INFO [01-30|17:29:46] send Ready msg 
-AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
-INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
-INFO [01-30|17:29:46] ------Received ReadMsg------ 
-AddReady from: [220 236 234 243 252 92 10 99 209 149 214 155 26 144 1 27 123 25 101 13]
-INFO [01-30|17:29:46] send Ready msg 
-INFO [01-30|17:29:46] send Ready msg 
-INFO [01-30|17:29:46] send Ready msg 
-INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
-INFO [01-30|17:29:46] ------Received ReadMsg------ 
-INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
-INFO [01-30|17:29:46] ------Received ReadMsg------ 
-AddReady from: [220 236 234 243 252 92 10 99 209 149 214 155 26 144 1 27 123 25 101 13]
-AddReady from: [220 236 234 243 252 92 10 99 209 149 214 155 26 144 1 27 123 25 101 13]
-INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
-INFO [01-30|17:29:46] ------Received ReadMsg------ 
-AddReady from: [220 236 234 243 252 92 10 99 209 149 214 155 26 144 1 27 123 25 101 13]
-INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
-INFO [01-30|17:29:46] ------Received ReadMsg------ 
-INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
-INFO [01-30|17:29:46] ------Received ReadMsg------ 
+INFO [01-30|17:52:44] RLPx listener up                         self="enode://d9d5b902798f5c42901f3fd993e58a9fb2ded12c3996e2a3849d4fdfcd0c3516aa806f56d93a759278d1c92e88b0daccffc69312581544c9f680a13a2e556a9e@[::]:30306?discport=0"
+INFO [01-30|17:52:44] HTTP endpoint opened: http://127.0.0.1:8548 
+INFO [01-30|17:52:44] IPC endpoint opened: /Users/jianweisu/Desktop/Ethereum/FastBFT_ethereum/examples/data/node4/geth.ipc 
+INFO [01-30|17:52:45] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:52:45] ------Received ReadMsg------ 
 AddReady from: [125 87 122 89 123 39 66 180 152 203 92 240 194 108 220 215 38 211 158 110]
-INFO [01-30|17:29:46] send Ready msg 
-INFO [01-30|17:29:46] send Ready msg 
-INFO [01-30|17:29:46] send Ready msg 
+INFO [01-30|17:52:45] send Ready msg 
+INFO [01-30|17:52:45] send Ready msg 
+INFO [01-30|17:52:45] send Ready msg 
+INFO [01-30|17:52:45] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:52:45] ------Received ReadMsg------ 
 AddReady from: [125 87 122 89 123 39 66 180 152 203 92 240 194 108 220 215 38 211 158 110]
-INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
-INFO [01-30|17:29:46] ------Received ReadMsg------ 
+INFO [01-30|17:52:45] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:52:45] ------Received ReadMsg------ 
+AddReady from: [125 87 122 89 123 39 66 180 152 203 92 240 194 108 220 215 38 211 158 110]
+INFO [01-30|17:52:45] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:52:45] ------Received ReadMsg------ 
+AddReady from: [125 87 122 89 123 39 66 180 152 203 92 240 194 108 220 215 38 211 158 110]
+ready: 2 need: 2.6666667
+INFO [01-30|17:52:45] consensusManager not ready  
+ready: 2 need: 2.6666667
+INFO [01-30|17:52:45] send Ready msg 
+INFO [01-30|17:52:45] send Ready msg 
+INFO [01-30|17:52:45] send Ready msg 
+INFO [01-30|17:52:45] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:52:45] ------Received ReadMsg------ 
+AddReady from: [89 132 67 241 136 14 245 133 178 31 29 117 133 189 5 119 64 40 97 229]
+INFO [01-30|17:52:45] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:52:45] ------Received ReadMsg------ 
+AddReady from: [89 132 67 241 136 14 245 133 178 31 29 117 133 189 5 119 64 40 97 229]
+INFO [01-30|17:52:45] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:52:45] ------Received ReadMsg------ 
+AddReady from: [89 132 67 241 136 14 245 133 178 31 29 117 133 189 5 119 64 40 97 229]
+INFO [01-30|17:52:45] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:52:45] ------Received ReadMsg------ 
+AddReady from: [220 236 234 243 252 92 10 99 209 149 214 155 26 144 1 27 123 25 101 13]
+INFO [01-30|17:52:45] send Ready msg 
+INFO [01-30|17:52:45] send Ready msg 
+INFO [01-30|17:52:45] send Ready msg 
+INFO [01-30|17:52:45] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:52:45] ------Received ReadMsg------ 
+AddReady from: [220 236 234 243 252 92 10 99 209 149 214 155 26 144 1 27 123 25 101 13]
+INFO [01-30|17:52:45] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:52:45] ------Received ReadMsg------ 
+AddReady from: [220 236 234 243 252 92 10 99 209 149 214 155 26 144 1 27 123 25 101 13]
+INFO [01-30|17:52:45] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:52:45] ------Received ReadMsg------ 
+AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
+INFO [01-30|17:52:45] send Ready msg 
+INFO [01-30|17:52:45] send Ready msg 
+INFO [01-30|17:52:45] send Ready msg 
+INFO [01-30|17:52:45] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:52:45] ------Received ReadMsg------ 
+AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
+INFO [01-30|17:52:45] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:52:45] ------Received ReadMsg------ 
+AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
+INFO [01-30|17:52:45] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:52:45] ------Received ReadMsg------ 
+AddReady from: [125 87 122 89 123 39 66 180 152 203 92 240 194 108 220 215 38 211 158 110]
+INFO [01-30|17:52:45] send Ready msg 
+INFO [01-30|17:52:45] send Ready msg 
+INFO [01-30|17:52:45] send Ready msg 
+INFO [01-30|17:52:45] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:52:45] ------Received ReadMsg------ 
+AddReady from: [125 87 122 89 123 39 66 180 152 203 92 240 194 108 220 215 38 211 158 110]
+INFO [01-30|17:52:45] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:52:45] ------Received ReadMsg------ 
 AddReady from: [125 87 122 89 123 39 66 180 152 203 92 240 194 108 220 215 38 211 158 110]
 ready: 4 need: 2.6666667
 ready: 4 need: 2.6666667
-INFO [01-30|17:29:46] send Ready msg 
-INFO [01-30|17:29:46] send Ready msg 
-INFO [01-30|17:29:46] send Ready msg 
-INFO [01-30|17:29:46] -----------------consensusManager Ready------------------------- 
-INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
-INFO [01-30|17:29:46] ------Received ReadMsg------ 
+INFO [01-30|17:52:45] send Ready msg 
+INFO [01-30|17:52:45] send Ready msg 
+INFO [01-30|17:52:45] send Ready msg 
+INFO [01-30|17:52:45] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:52:45] ------Received ReadMsg------ 
 AddReady from: [89 132 67 241 136 14 245 133 178 31 29 117 133 189 5 119 64 40 97 229]
-INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
-INFO [01-30|17:29:46] ------Received ReadMsg------ 
+INFO [01-30|17:52:45] -----------------consensusManager Ready------------------------- 
+INFO [01-30|17:52:45] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:52:45] ------Received ReadMsg------ 
 AddReady from: [89 132 67 241 136 14 245 133 178 31 29 117 133 189 5 119 64 40 97 229]
-INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
-INFO [01-30|17:29:46] ------Received ReadMsg------ 
+INFO [01-30|17:52:45] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:52:45] ------Received ReadMsg------ 
 AddReady from: [89 132 67 241 136 14 245 133 178 31 29 117 133 189 5 119 64 40 97 229]
-INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
-INFO [01-30|17:29:46] ------Received ReadMsg------ 
-AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
-INFO [01-30|17:29:46] send Ready msg 
-INFO [01-30|17:29:46] send Ready msg 
-INFO [01-30|17:29:46] send Ready msg 
-INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
-INFO [01-30|17:29:46] ------Received ReadMsg------ 
-INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
-INFO [01-30|17:29:46] ------Received ReadMsg------ 
-AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
-AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
-INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
-INFO [01-30|17:29:46] ------Received ReadMsg------ 
-AddReady from: [220 236 234 243 252 92 10 99 209 149 214 155 26 144 1 27 123 25 101 13]
-INFO [01-30|17:29:46] send Ready msg 
-INFO [01-30|17:29:46] send Ready msg 
-INFO [01-30|17:29:46] send Ready msg 
-INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
-INFO [01-30|17:29:46] ------Received ReadMsg------ 
-INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
-INFO [01-30|17:29:47] ------Received ReadMsg------ 
-AddReady from: [220 236 234 243 252 92 10 99 209 149 214 155 26 144 1 27 123 25 101 13]
-AddReady from: [220 236 234 243 252 92 10 99 209 149 214 155 26 144 1 27 123 25 101 13]
-INFO [01-30|17:30:59] Transaction pool price threshold updated price=18000000000
-INFO [01-30|17:30:59] Starting mining operation 
-INFO [01-30|17:30:59] ---atomic.LoadInt32(&self.mining) == 1 && work.tcount == 0--- 
-INFO [01-30|17:31:02] ---atomic.LoadInt32(&self.mining) == 1 && work.tcount == 0--- 
+INFO [01-30|17:53:57] Handle BFT Msg,                          msg="msg #11 (22002 bytes)"
+INFO [01-30|17:53:57] -------Received NewBlockProposalMsg------- 
+bpHR: H: 1 R: 0
+cmHR: H: 1 R: 0
+INFO [01-30|17:53:57] --------------------------------------- 
+INFO [01-30|17:53:57] -----------add proposal and send vote------ 
+INFO [01-30|17:53:57] In IsValid() 
+len(lockset.Votes): 0 lockset.EligibleVotesNum: 0
+INFO [01-30|17:53:57] cm add BlockProposal                     h=1 r=0
+INFO [01-30|17:53:57] in HasQuorum 
+INFO [01-30|17:53:57] In IsValid() 
+len(lockset.Votes): 1 lockset.EligibleVotesNum: 0
+INFO [01-30|17:53:57] In addBlockCandidates!! 
+INFO [01-30|17:53:57] addMsigProposal in                       LOG15_ERROR=
+INFO [01-30|17:53:57] -------in handle NewBlockProposalMsg, success!------- 
+INFO [01-30|17:53:57] Handle BFT Msg,                          msg="msg #17 (107 bytes)"
+INFO [01-30|17:53:57] ------Received VoteMsg------ 
+voteHR: H: 1 R: 0 voteType:: 1 voteHash: [111 32 87 149 171 206 124 139 150 120 82 189 225 121 96 68 193 26 66 70 253 90 84 17 80 79 31 21 212 242 200 217]
+cmHR: H: 1 R: 0
+INFO [01-30|17:53:57] --------------------------------------- 
+INFO [01-30|17:53:57] addVote to                               height=1 round=0 from=0x82a978b3f5962a5b0957d9ee9eef472ee55b42f1 success=true cm.coinbase=0x598443f1880ef585b21f1d7585bd0577402861e5
+INFO [01-30|17:53:57] ------in handle VoteMsg, success!------ 
+INFO [01-30|17:53:58] Handle BFT Msg,                          msg="msg #17 (107 bytes)"
+INFO [01-30|17:53:58] ------Received VoteMsg------ 
+voteHR: H: 1 R: 0 voteType:: 1 voteHash: [111 32 87 149 171 206 124 139 150 120 82 189 225 121 96 68 193 26 66 70 253 90 84 17 80 79 31 21 212 242 200 217]
+cmHR: H: 1 R: 0
+INFO [01-30|17:53:58] --------------------------------------- 
+INFO [01-30|17:53:58] addVote to                               height=1 round=0 from=0xdceceaf3fc5c0a63d195d69b1a90011b7b19650d success=true cm.coinbase=0x598443f1880ef585b21f1d7585bd0577402861e5
+INFO [01-30|17:53:58] ------in handle VoteMsg, success!------ 
+INFO [01-30|17:53:58] Transaction pool price threshold updated price=18000000000
+INFO [01-30|17:53:58] Starting mining operation 
+INFO [01-30|17:53:58] Commit new mining work                   number=1 txs=200 uncles=0 elapsed=183.922ms
+INFO [01-30|17:53:58] Sealing                                  block n=1
+StartConsensus, 1548842038402603000
+INFO [01-30|17:53:58] Start Process 
+INFO [01-30|17:53:58] in cm.Process, check lastCommittingLockset() 
+INFO [01-30|17:53:58] In IsValid() 
+len(lockset.Votes): 2 lockset.EligibleVotesNum: 0
+INFO [01-30|17:53:58] in HasQuorum 
+INFO [01-30|17:53:58] In IsValid() 
+len(lockset.Votes): 2 lockset.EligibleVotesNum: 0
+=====CM.COINBASE IS:===== [89 132 67 241 136 14 245 133 178 31 29 117 133 189 5 119 64 40 97 229] block number is: 1
+INFO [01-30|17:53:58] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:53:58] ---------------process------------------ 
+INFO [01-30|17:53:58] In RM Process                            height=1 round=0
+INFO [01-30|17:53:58] --------In rm.propose------- 
+INFO [01-30|17:53:58] ---------------in rm.vote----------------- 
+INFO [01-30|17:53:58] in vote in RM                            height=1 round=0
+INFO [01-30|17:53:58] vote mp 
+INFO [01-30|17:53:58] vote success in                          height=1 round=0
+INFO [01-30|17:53:58] Send VoteMsg 
+INFO [01-30|17:53:58] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:53:58] in HasQuorum 
+INFO [01-30|17:53:58] In IsValid() 
+len(lockset.Votes): 3 lockset.EligibleVotesNum: 4
+INFO [01-30|17:53:58] rm lockset is not valid yet 
+INFO [01-30|17:53:58] after cm.process() 
+INFO [01-30|17:53:58] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:53:58] ---------------process------------------ 
+INFO [01-30|17:53:58] In RM Process                            height=1 round=0
+INFO [01-30|17:53:58] --------In rm.propose------- 
+INFO [01-30|17:53:58] ---------------in rm.vote----------------- 
+INFO [01-30|17:53:58] voted 
+INFO [01-30|17:53:58] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:53:58] in HasQuorum 
+INFO [01-30|17:53:58] In IsValid() 
+len(lockset.Votes): 3 lockset.EligibleVotesNum: 4
+INFO [01-30|17:53:58] rm lockset is not valid yet 
+INFO [01-30|17:53:58] after cm.process() 
+INFO [01-30|17:53:58] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:53:58] ---------------process------------------ 
+INFO [01-30|17:53:58] In RM Process                            height=1 round=0
+INFO [01-30|17:53:58] --------In rm.propose------- 
+INFO [01-30|17:53:58] ---------------in rm.vote----------------- 
+INFO [01-30|17:53:58] voted 
+INFO [01-30|17:53:58] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:53:58] in HasQuorum 
+INFO [01-30|17:53:58] In IsValid() 
+len(lockset.Votes): 3 lockset.EligibleVotesNum: 4
+INFO [01-30|17:53:58] rm lockset is not valid yet 
+INFO [01-30|17:53:58] after cm.process() 
+INFO [01-30|17:53:58] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:53:58] ---------------process------------------ 
+INFO [01-30|17:53:58] In RM Process                            height=1 round=0
+INFO [01-30|17:53:58] --------In rm.propose------- 
+INFO [01-30|17:53:58] ---------------in rm.vote----------------- 
+INFO [01-30|17:53:58] voted 
+INFO [01-30|17:53:58] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:53:58] in HasQuorum 
+INFO [01-30|17:53:58] In IsValid() 
+len(lockset.Votes): 3 lockset.EligibleVotesNum: 4
+INFO [01-30|17:53:58] rm lockset is not valid yet 
+INFO [01-30|17:53:58] after cm.process() 
+INFO [01-30|17:53:58] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:53:58] ---------------process------------------ 
+INFO [01-30|17:53:58] In RM Process                            height=1 round=0
+INFO [01-30|17:53:58] --------In rm.propose------- 
+INFO [01-30|17:53:58] ---------------in rm.vote----------------- 
+INFO [01-30|17:53:58] voted 
+INFO [01-30|17:53:58] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:53:58] in HasQuorum 
+INFO [01-30|17:53:58] In IsValid() 
+len(lockset.Votes): 3 lockset.EligibleVotesNum: 4
+INFO [01-30|17:53:58] rm lockset is not valid yet 
+INFO [01-30|17:53:58] after cm.process() 
+INFO [01-30|17:53:58] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:53:58] ---------------process------------------ 
+INFO [01-30|17:53:58] In RM Process                            height=1 round=0
+INFO [01-30|17:53:58] --------In rm.propose------- 
+INFO [01-30|17:53:58] ---------------in rm.vote----------------- 
+INFO [01-30|17:53:58] voted 
+INFO [01-30|17:53:58] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:53:58] in HasQuorum 
+INFO [01-30|17:53:58] In IsValid() 
+len(lockset.Votes): 3 lockset.EligibleVotesNum: 4
+INFO [01-30|17:53:58] rm lockset is not valid yet 
+INFO [01-30|17:53:58] after cm.process() 
+INFO [01-30|17:53:59] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:53:59] ---------------process------------------ 
+INFO [01-30|17:53:59] In RM Process                            height=1 round=0
+INFO [01-30|17:53:59] --------In rm.propose------- 
+INFO [01-30|17:53:59] ---------------in rm.vote----------------- 
+INFO [01-30|17:53:59] voted 
+INFO [01-30|17:53:59] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:53:59] in HasQuorum 
+INFO [01-30|17:53:59] In IsValid() 
+len(lockset.Votes): 3 lockset.EligibleVotesNum: 4
+INFO [01-30|17:53:59] rm lockset is not valid yet 
+INFO [01-30|17:53:59] after cm.process() 
+INFO [01-30|17:53:59] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:53:59] ---------------process------------------ 
+INFO [01-30|17:53:59] In RM Process                            height=1 round=0
+INFO [01-30|17:53:59] --------In rm.propose------- 
+INFO [01-30|17:53:59] ---------------in rm.vote----------------- 
+INFO [01-30|17:53:59] voted 
+INFO [01-30|17:53:59] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:53:59] in HasQuorum 
+INFO [01-30|17:53:59] In IsValid() 
+len(lockset.Votes): 3 lockset.EligibleVotesNum: 4
+INFO [01-30|17:53:59] rm lockset is not valid yet 
+INFO [01-30|17:53:59] after cm.process() 
+INFO [01-30|17:53:59] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:53:59] ---------------process------------------ 
+INFO [01-30|17:53:59] In RM Process                            height=1 round=0
+INFO [01-30|17:53:59] --------In rm.propose------- 
+INFO [01-30|17:53:59] ---------------in rm.vote----------------- 
+INFO [01-30|17:53:59] voted 
+INFO [01-30|17:53:59] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:53:59] in HasQuorum 
+INFO [01-30|17:53:59] In IsValid() 
+len(lockset.Votes): 3 lockset.EligibleVotesNum: 4
+INFO [01-30|17:53:59] rm lockset is not valid yet 
+INFO [01-30|17:53:59] after cm.process() 
+INFO [01-30|17:53:59] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:53:59] ---------------process------------------ 
+INFO [01-30|17:53:59] In RM Process                            height=1 round=0
+INFO [01-30|17:53:59] --------In rm.propose------- 
+INFO [01-30|17:53:59] ---------------in rm.vote----------------- 
+INFO [01-30|17:53:59] voted 
+INFO [01-30|17:53:59] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:53:59] in HasQuorum 
+INFO [01-30|17:53:59] In IsValid() 
+len(lockset.Votes): 3 lockset.EligibleVotesNum: 4
+INFO [01-30|17:53:59] rm lockset is not valid yet 
+INFO [01-30|17:53:59] after cm.process() 
+INFO [01-30|17:53:59] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:53:59] ---------------process------------------ 
+INFO [01-30|17:53:59] In RM Process                            height=1 round=0
+INFO [01-30|17:53:59] --------In rm.propose------- 
+INFO [01-30|17:53:59] ---------------in rm.vote----------------- 
+INFO [01-30|17:53:59] voted 
+INFO [01-30|17:53:59] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:53:59] in HasQuorum 
+INFO [01-30|17:53:59] In IsValid() 
+len(lockset.Votes): 3 lockset.EligibleVotesNum: 4
+INFO [01-30|17:53:59] rm lockset is not valid yet 
+INFO [01-30|17:53:59] after cm.process() 
+INFO [01-30|17:53:59] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:53:59] ---------------process------------------ 
+INFO [01-30|17:53:59] In RM Process                            height=1 round=0
+INFO [01-30|17:53:59] --------In rm.propose------- 
+INFO [01-30|17:53:59] ---------------in rm.vote----------------- 
+INFO [01-30|17:53:59] voted 
+INFO [01-30|17:53:59] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:53:59] in HasQuorum 
+INFO [01-30|17:53:59] In IsValid() 
+len(lockset.Votes): 3 lockset.EligibleVotesNum: 4
+INFO [01-30|17:53:59] rm lockset is not valid yet 
+INFO [01-30|17:53:59] after cm.process() 
+INFO [01-30|17:53:59] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:53:59] ---------------process------------------ 
+INFO [01-30|17:53:59] In RM Process                            height=1 round=0
+INFO [01-30|17:53:59] --------In rm.propose------- 
+INFO [01-30|17:53:59] ---------------in rm.vote----------------- 
+INFO [01-30|17:53:59] voted 
+INFO [01-30|17:53:59] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:53:59] in HasQuorum 
+INFO [01-30|17:53:59] In IsValid() 
+len(lockset.Votes): 3 lockset.EligibleVotesNum: 4
+INFO [01-30|17:53:59] rm lockset is not valid yet 
+INFO [01-30|17:53:59] after cm.process() 
+INFO [01-30|17:53:59] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:53:59] ---------------process------------------ 
+INFO [01-30|17:53:59] In RM Process                            height=1 round=0
+INFO [01-30|17:53:59] --------In rm.propose------- 
+INFO [01-30|17:53:59] ---------------in rm.vote----------------- 
+INFO [01-30|17:53:59] voted 
+INFO [01-30|17:53:59] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:53:59] in HasQuorum 
+INFO [01-30|17:53:59] In IsValid() 
+len(lockset.Votes): 3 lockset.EligibleVotesNum: 4
+INFO [01-30|17:53:59] rm lockset is not valid yet 
+INFO [01-30|17:53:59] after cm.process() 
+INFO [01-30|17:53:59] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:53:59] ---------------process------------------ 
+INFO [01-30|17:53:59] In RM Process                            height=1 round=0
+INFO [01-30|17:53:59] --------In rm.propose------- 
+INFO [01-30|17:53:59] ---------------in rm.vote----------------- 
+INFO [01-30|17:53:59] voted 
+INFO [01-30|17:53:59] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:53:59] in HasQuorum 
+INFO [01-30|17:53:59] In IsValid() 
+len(lockset.Votes): 3 lockset.EligibleVotesNum: 4
+INFO [01-30|17:53:59] rm lockset is not valid yet 
+INFO [01-30|17:53:59] after cm.process() 
+INFO [01-30|17:53:59] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:53:59] ---------------process------------------ 
+INFO [01-30|17:53:59] In RM Process                            height=1 round=0
+INFO [01-30|17:53:59] --------In rm.propose------- 
+INFO [01-30|17:53:59] ---------------in rm.vote----------------- 
+INFO [01-30|17:53:59] voted 
+INFO [01-30|17:53:59] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:53:59] in HasQuorum 
+INFO [01-30|17:53:59] In IsValid() 
+len(lockset.Votes): 3 lockset.EligibleVotesNum: 4
+INFO [01-30|17:53:59] rm lockset is not valid yet 
+INFO [01-30|17:53:59] after cm.process() 
+INFO [01-30|17:54:00] Handle BFT Msg,                          msg="msg #17 (107 bytes)"
+INFO [01-30|17:54:00] ------Received VoteMsg------ 
+voteHR: H: 1 R: 0 voteType:: 2 voteHash: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+cmHR: H: 1 R: 0
+INFO [01-30|17:54:00] --------------------------------------- 
+INFO [01-30|17:54:00] addVote to                               height=1 round=0 from=0x7d577a597b2742b498cb5cf0c26cdcd726d39e6e success=true cm.coinbase=0x598443f1880ef585b21f1d7585bd0577402861e5
+INFO [01-30|17:54:00] ------in handle VoteMsg, success!------ 
+INFO [01-30|17:54:00] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:54:00] ---------------process------------------ 
+INFO [01-30|17:54:00] In RM Process                            height=1 round=0
+INFO [01-30|17:54:00] --------In rm.propose------- 
+INFO [01-30|17:54:00] ---------------in rm.vote----------------- 
+INFO [01-30|17:54:00] voted 
+INFO [01-30|17:54:00] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:54:00] in HasQuorum 
+INFO [01-30|17:54:00] In IsValid() 
+len(lockset.Votes): 4 lockset.EligibleVotesNum: 4
+INFO [01-30|17:54:00] rm lockset is not valid yet 
+INFO [01-30|17:54:00] after cm.process() 
+INFO [01-30|17:54:00] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:54:00] ---------------process------------------ 
+INFO [01-30|17:54:00] In RM Process                            height=1 round=0
+INFO [01-30|17:54:00] --------In rm.propose------- 
+INFO [01-30|17:54:00] ---------------in rm.vote----------------- 
+INFO [01-30|17:54:00] voted 
+INFO [01-30|17:54:00] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:54:00] in HasQuorum 
+INFO [01-30|17:54:00] In IsValid() 
+len(lockset.Votes): 4 lockset.EligibleVotesNum: 4
+INFO [01-30|17:54:00] rm lockset is not valid yet 
+INFO [01-30|17:54:00] after cm.process() 
+INFO [01-30|17:54:00] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:54:00] ---------------process------------------ 
+INFO [01-30|17:54:00] In RM Process                            height=1 round=0
+INFO [01-30|17:54:00] --------In rm.propose------- 
+INFO [01-30|17:54:00] ---------------in rm.vote----------------- 
+INFO [01-30|17:54:00] voted 
+INFO [01-30|17:54:00] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:54:00] in HasQuorum 
+INFO [01-30|17:54:00] In IsValid() 
+len(lockset.Votes): 4 lockset.EligibleVotesNum: 4
+INFO [01-30|17:54:00] rm lockset is not valid yet 
+INFO [01-30|17:54:00] after cm.process() 
+INFO [01-30|17:54:00] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:54:00] ---------------process------------------ 
+INFO [01-30|17:54:00] In RM Process                            height=1 round=0
+INFO [01-30|17:54:00] --------In rm.propose------- 
+INFO [01-30|17:54:00] ---------------in rm.vote----------------- 
+INFO [01-30|17:54:00] voted 
+INFO [01-30|17:54:00] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:54:00] in HasQuorum 
+INFO [01-30|17:54:00] In IsValid() 
+len(lockset.Votes): 4 lockset.EligibleVotesNum: 4
+INFO [01-30|17:54:00] rm lockset is not valid yet 
+INFO [01-30|17:54:00] after cm.process() 
+INFO [01-30|17:54:00] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:54:00] ---------------process------------------ 
+INFO [01-30|17:54:00] In RM Process                            height=1 round=0
+INFO [01-30|17:54:00] --------In rm.propose------- 
+INFO [01-30|17:54:00] ---------------in rm.vote----------------- 
+INFO [01-30|17:54:00] voted 
+INFO [01-30|17:54:00] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:54:00] in HasQuorum 
+INFO [01-30|17:54:00] In IsValid() 
+len(lockset.Votes): 4 lockset.EligibleVotesNum: 4
+INFO [01-30|17:54:00] rm lockset is not valid yet 
+INFO [01-30|17:54:00] after cm.process() 
+INFO [01-30|17:54:00] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:54:00] ---------------process------------------ 
+INFO [01-30|17:54:00] In RM Process                            height=1 round=0
+INFO [01-30|17:54:00] --------In rm.propose------- 
+INFO [01-30|17:54:00] ---------------in rm.vote----------------- 
+INFO [01-30|17:54:00] voted 
+INFO [01-30|17:54:00] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:54:00] in HasQuorum 
+INFO [01-30|17:54:00] In IsValid() 
+len(lockset.Votes): 4 lockset.EligibleVotesNum: 4
+INFO [01-30|17:54:00] rm lockset is not valid yet 
+INFO [01-30|17:54:00] after cm.process() 
+INFO [01-30|17:54:00] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:54:00] ---------------process------------------ 
+INFO [01-30|17:54:00] In RM Process                            height=1 round=0
+INFO [01-30|17:54:00] --------In rm.propose------- 
+INFO [01-30|17:54:00] ---------------in rm.vote----------------- 
+INFO [01-30|17:54:00] voted 
+INFO [01-30|17:54:00] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:54:00] in HasQuorum 
+INFO [01-30|17:54:00] In IsValid() 
+len(lockset.Votes): 4 lockset.EligibleVotesNum: 4
+INFO [01-30|17:54:00] rm lockset is not valid yet 
+INFO [01-30|17:54:00] after cm.process() 
+INFO [01-30|17:54:00] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:54:00] ---------------process------------------ 
+INFO [01-30|17:54:00] In RM Process                            height=1 round=0
+INFO [01-30|17:54:00] --------In rm.propose------- 
+INFO [01-30|17:54:00] ---------------in rm.vote----------------- 
+INFO [01-30|17:54:00] voted 
+INFO [01-30|17:54:00] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:54:00] in HasQuorum 
+INFO [01-30|17:54:00] In IsValid() 
+len(lockset.Votes): 4 lockset.EligibleVotesNum: 4
+INFO [01-30|17:54:00] rm lockset is not valid yet 
+INFO [01-30|17:54:00] after cm.process() 
+INFO [01-30|17:54:00] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:54:00] ---------------process------------------ 
+INFO [01-30|17:54:00] In RM Process                            height=1 round=0
+INFO [01-30|17:54:00] --------In rm.propose------- 
+INFO [01-30|17:54:00] ---------------in rm.vote----------------- 
+INFO [01-30|17:54:00] voted 
+INFO [01-30|17:54:00] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:54:00] in HasQuorum 
+INFO [01-30|17:54:00] In IsValid() 
+len(lockset.Votes): 4 lockset.EligibleVotesNum: 4
+INFO [01-30|17:54:00] rm lockset is not valid yet 
+INFO [01-30|17:54:00] after cm.process() 
+INFO [01-30|17:54:00] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:54:00] ---------------process------------------ 
+INFO [01-30|17:54:00] In RM Process                            height=1 round=0
+INFO [01-30|17:54:00] --------In rm.propose------- 
+INFO [01-30|17:54:00] ---------------in rm.vote----------------- 
+INFO [01-30|17:54:00] voted 
+INFO [01-30|17:54:00] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:54:00] in HasQuorum 
+INFO [01-30|17:54:00] In IsValid() 
+len(lockset.Votes): 4 lockset.EligibleVotesNum: 4
+INFO [01-30|17:54:00] rm lockset is not valid yet 
+INFO [01-30|17:54:00] after cm.process() 
+INFO [01-30|17:54:01] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:54:01] ---------------process------------------ 
+INFO [01-30|17:54:01] In RM Process                            height=1 round=0
+INFO [01-30|17:54:01] --------In rm.propose------- 
+INFO [01-30|17:54:01] ---------------in rm.vote----------------- 
+INFO [01-30|17:54:01] voted 
+INFO [01-30|17:54:01] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:54:01] in HasQuorum 
+INFO [01-30|17:54:01] In IsValid() 
+len(lockset.Votes): 4 lockset.EligibleVotesNum: 4
+INFO [01-30|17:54:01] rm lockset is not valid yet 
+INFO [01-30|17:54:01] after cm.process() 
+INFO [01-30|17:54:01] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:54:01] ---------------process------------------ 
+INFO [01-30|17:54:01] In RM Process                            height=1 round=0
+INFO [01-30|17:54:01] --------In rm.propose------- 
+INFO [01-30|17:54:01] ---------------in rm.vote----------------- 
+INFO [01-30|17:54:01] voted 
+INFO [01-30|17:54:01] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:54:01] in HasQuorum 
+INFO [01-30|17:54:01] In IsValid() 
+len(lockset.Votes): 4 lockset.EligibleVotesNum: 4
+INFO [01-30|17:54:01] rm lockset is not valid yet 
+INFO [01-30|17:54:01] after cm.process() 
+INFO [01-30|17:54:01] case: default, cm.process 
+ready: 4 need: 2.6666667
+INFO [01-30|17:54:01] ---------------process------------------ 
+INFO [01-30|17:54:01] In RM Process                            height=1 round=0
+INFO [01-30|17:54:01] --------In rm.propose------- 
+INFO [01-30|17:54:01] ---------------in rm.vote----------------- 
+INFO [01-30|17:54:01] voted 
+INFO [01-30|17:54:01] in rm.process, check lockset HasQuorum 
+INFO [01-30|17:54:01] in HasQuorum 
+INFO [01-30|17:54:01] In IsValid() 
+len(lockset.Votes): 4 lockset.EligibleVotesNum: 4
+INFO [01-30|17:54:01] rm lockset is not valid yet 
+INFO [01-30|17:54:01] after cm.process() 
