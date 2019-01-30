@@ -12,7 +12,7 @@ if [ ${5} == "normal" ];then
 	./setupEnv.sh ${1} ${2} ${4}
 	sleep 5.0 # wait for the ipc port setup, otherwise may get connection refuse
 	./sendtx.sh ${1} ${2} ${4}
-	sleep 120.0
+	sleep 60.0
 	./run-miner.sh ${1} ${2} ${4}
 	sleep 3.0
 

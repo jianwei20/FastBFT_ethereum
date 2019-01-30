@@ -1,0 +1,42 @@
+WARN [01-20|19:01:38] No etherbase set and no accounts found as default 
+INFO [01-20|19:01:39] Starting peer-to-peer node               instance=Geth/v1.6.7-unstable-5c3a2bf5/darwin-amd64/go1.9.7
+INFO [01-20|19:01:39] Allocated cache and file handles         database=/Users/sujianwei20/Desktop/FastBFT_ethereum/examples/data/node1/geth/chaindata cache=128 handles=1024
+WARN [01-20|19:01:39] Upgrading chain database to use sequential keys 
+INFO [01-20|19:01:39] Database conversion successful 
+INFO [01-20|19:01:39] Initialised chain configuration          config="{ChainID: 2235 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Metropolis: <nil> Engine: ethash}"
+INFO [01-20|19:01:39] config bft is                            bft=true
+WARN [01-20|19:01:39] Upgrading db log bloom bins 
+INFO [01-20|19:01:39] Bloom-bin upgrade completed              elapsed=143.471µs
+INFO [01-20|19:01:39] Initialising Ethereum protocol           versions="[63 62]" network=2234
+INFO [01-20|19:01:39] Loaded most recent local header          number=0 hash=c97b85…f2ed18 td=1048576
+INFO [01-20|19:01:39] Loaded most recent local full block      number=0 hash=c97b85…f2ed18 td=1048576
+INFO [01-20|19:01:39] Loaded most recent local fast block      number=0 hash=c97b85…f2ed18 td=1048576
+INFO [01-20|19:01:39] in NewTxPool, call resetState 
+INFO [01-20|19:01:39] in NewTxPool, call pool.eventLoog() 
+INFO [01-20|19:01:39] Allocated cache and file handles         database=/Users/sujianwei20/Desktop/FastBFT_ethereum/examples/data/node1/geth/bftData   cache=128 handles=1024
+INFO [01-20|19:01:39] addVote to                               height=0 round=0 from=0x82a978b3f5962a5b0957d9ee9eef472ee55b42f1 success=true cm.coinbase=0x82a978b3f5962a5b0957d9ee9eef472ee55b42f1
+ready: 1 need: 2.6666667
+INFO [01-20|19:01:39] consensusManager not ready  
+ready: 1 need: 2.6666667
+INFO [01-20|19:01:39] Starting P2P networking 
+Fatal: Error starting protocol stack: listen tcp :30303: bind: address already in use
+{"remiAddr": ["0x6f34aed42364a393aa6e68a46525d8ba16af5687", "0xf4bee076e546dc7f2d33c293a26aff3e3d0a584c", "0xaa9745f9090141c7b2ba5ab55eaabaeea2707eea", "0xe6d5e8acbe5151b43aa592086031d06f5dad9069"], "txCounts": 10000, "prvKeys": ["74eb109ec9aa5c285952a4f8ccfbe2918516baa2d265ffcd6c19433925867d10", "ab8ec62cfa66d3b4a58096f00ac421423dd7fe4c9ebd72c0b9c4e006541dc01e", "0f7d592d8f3fd1d65a624d5de031bffa946a9ee5d8d25cc384c7a3060de8bdaf", "2e4d4e4b0bbf6fb8f10cfd6cfaf29fba3839f7f7d3454c0a2de18af0567b67d9"], "ipcPort": ["./data1/node1/geth.ipc", "./data1/node2/geth.ipc", "./data1/node3/geth.ipc", "./data1/node4/geth.ipc"]}
+------start sendtx------
+panic: dial unix ./data1/node1/geth.ipc: connect: no such file or directory
+
+goroutine 1 [running]:
+main.makeClient(0xc420014640, 0x40, 0xc4200130a0, 0x16, 0x0, 0x4, 0xc420059d00)
+	/Users/jianweisu/Desktop/Ethereum/FastBFT_ethereum/experiment/ethclient/main.go:196 +0xc0
+main.main()
+	/Users/jianweisu/Desktop/Ethereum/FastBFT_ethereum/experiment/ethclient/main.go:273 +0x3c9
+{"remiAddr": ["0xdb5a0db90d67df3b5200dba2a628a307ce1a9a15", "0x8657025025c9168c7077d82ba7f608c958d94c69", "0xd550f807e858fa6158665d7a13c33dabf5da67e7", "0xeba07d2a6d94923526cd2d818abb0bbbce5e7462", "0x971df70735431e41cef81cc1a7172e27b2632abb", "0xbb9c3d315902c889319e8d35b3c286b30c21d0b0"], "txCounts": 10000, "prvKeys": ["89dc4c2248c79dc510ef1a082e42b513eaf3a863f21fb309e55d78fe547a6448", "dd4984db06bb08675eb77f66ef030c92257d50eb06a1a16bab0d56e5afae05bb", "34cf7e4ef7c3df738c3264ac83ff28ebea824f37ea194c46dc3106920b63ebe6", "df423d8cca5a79a3a1af5905dfed79acab6b275fa432355c388bd562d6e41491", "ebfde1130b139c33066730e2683b16555f1f0c46238ca6736038a6aaa785c07f", "97fc5d148a113afcd5f91708f924df400e782a53fd8791576a27c3dc759e7128"], "ipcPort": ["./data1/node1/geth.ipc", "./data1/node2/geth.ipc", "./data1/node3/geth.ipc", "./data1/node4/geth.ipc", "./data1/node5/geth.ipc", "./data1/node6/geth.ipc"]}
+------start sendtx------
+panic: dial unix ./data1/node1/geth.ipc: connect: no such file or directory
+
+goroutine 1 [running]:
+main.makeClient(0xc420014640, 0x40, 0xc4200130a0, 0x16, 0x0, 0x6, 0xc42005a9c0)
+	/Users/jianweisu/Desktop/Ethereum/FastBFT_ethereum/experiment/ethclient/main.go:196 +0xc0
+main.main()
+	/Users/jianweisu/Desktop/Ethereum/FastBFT_ethereum/experiment/ethclient/main.go:273 +0x3c9
+nohup: ../ethclient/ethclient: No such file or directory
+nohup: ../ethclient/ethclient: No such file or directory

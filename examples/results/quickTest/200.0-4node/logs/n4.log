@@ -1,0 +1,107 @@
+INFO [01-30|17:29:46] Starting peer-to-peer node               instance=Geth/v1.6.7-unstable-deaaed87/darwin-amd64/go1.9.6
+INFO [01-30|17:29:46] Allocated cache and file handles         database=/Users/jianweisu/Desktop/Ethereum/FastBFT_ethereum/examples/data/node4/geth/chaindata cache=128 handles=1024
+WARN [01-30|17:29:46] Upgrading chain database to use sequential keys 
+INFO [01-30|17:29:46] Database conversion successful 
+INFO [01-30|17:29:46] Initialised chain configuration          config="{ChainID: 2235 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Metropolis: <nil> Engine: ethash}"
+INFO [01-30|17:29:46] config bft is                            bft=true
+WARN [01-30|17:29:46] Upgrading db log bloom bins 
+INFO [01-30|17:29:46] Bloom-bin upgrade completed              elapsed=95.747µs
+INFO [01-30|17:29:46] Initialising Ethereum protocol           versions="[63 62]" network=2234
+INFO [01-30|17:29:46] Loaded most recent local header          number=0 hash=c97b85…f2ed18 td=1048576
+INFO [01-30|17:29:46] Loaded most recent local full block      number=0 hash=c97b85…f2ed18 td=1048576
+INFO [01-30|17:29:46] Loaded most recent local fast block      number=0 hash=c97b85…f2ed18 td=1048576
+INFO [01-30|17:29:46] in NewTxPool, call resetState 
+INFO [01-30|17:29:46] in NewTxPool, call pool.eventLoog() 
+INFO [01-30|17:29:46] Allocated cache and file handles         database=/Users/jianweisu/Desktop/Ethereum/FastBFT_ethereum/examples/data/node4/geth/bftData   cache=128 handles=1024
+INFO [01-30|17:29:46] addVote to                               height=0 round=0 from=0x598443f1880ef585b21f1d7585bd0577402861e5 success=true cm.coinbase=0x598443f1880ef585b21f1d7585bd0577402861e5
+ready: 1 need: 2.6666667
+INFO [01-30|17:29:46] consensusManager not ready  
+ready: 1 need: 2.6666667
+INFO [01-30|17:29:46] Starting P2P networking 
+INFO [01-30|17:29:46] RLPx listener up                         self="enode://d9d5b902798f5c42901f3fd993e58a9fb2ded12c3996e2a3849d4fdfcd0c3516aa806f56d93a759278d1c92e88b0daccffc69312581544c9f680a13a2e556a9e@[::]:30306?discport=0"
+INFO [01-30|17:29:46] ---In BFTvalidatorCommitBlock--- 
+INFO [01-30|17:29:46] IPC endpoint opened: /Users/jianweisu/Desktop/Ethereum/FastBFT_ethereum/examples/data/node4/geth.ipc 
+INFO [01-30|17:29:46] HTTP endpoint opened: http://127.0.0.1:8548 
+INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:29:46] ------Received ReadMsg------ 
+INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:29:46] ------Received ReadMsg------ 
+INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:29:46] ------Received ReadMsg------ 
+AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
+INFO [01-30|17:29:46] send Ready msg 
+INFO [01-30|17:29:46] send Ready msg 
+AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
+INFO [01-30|17:29:46] send Ready msg 
+INFO [01-30|17:29:46] send Ready msg 
+AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
+INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:29:46] ------Received ReadMsg------ 
+AddReady from: [220 236 234 243 252 92 10 99 209 149 214 155 26 144 1 27 123 25 101 13]
+INFO [01-30|17:29:46] send Ready msg 
+INFO [01-30|17:29:46] send Ready msg 
+INFO [01-30|17:29:46] send Ready msg 
+INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:29:46] ------Received ReadMsg------ 
+INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:29:46] ------Received ReadMsg------ 
+AddReady from: [220 236 234 243 252 92 10 99 209 149 214 155 26 144 1 27 123 25 101 13]
+AddReady from: [220 236 234 243 252 92 10 99 209 149 214 155 26 144 1 27 123 25 101 13]
+INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:29:46] ------Received ReadMsg------ 
+AddReady from: [220 236 234 243 252 92 10 99 209 149 214 155 26 144 1 27 123 25 101 13]
+INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:29:46] ------Received ReadMsg------ 
+INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:29:46] ------Received ReadMsg------ 
+AddReady from: [125 87 122 89 123 39 66 180 152 203 92 240 194 108 220 215 38 211 158 110]
+INFO [01-30|17:29:46] send Ready msg 
+INFO [01-30|17:29:46] send Ready msg 
+INFO [01-30|17:29:46] send Ready msg 
+AddReady from: [125 87 122 89 123 39 66 180 152 203 92 240 194 108 220 215 38 211 158 110]
+INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:29:46] ------Received ReadMsg------ 
+AddReady from: [125 87 122 89 123 39 66 180 152 203 92 240 194 108 220 215 38 211 158 110]
+ready: 4 need: 2.6666667
+ready: 4 need: 2.6666667
+INFO [01-30|17:29:46] send Ready msg 
+INFO [01-30|17:29:46] send Ready msg 
+INFO [01-30|17:29:46] send Ready msg 
+INFO [01-30|17:29:46] -----------------consensusManager Ready------------------------- 
+INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:29:46] ------Received ReadMsg------ 
+AddReady from: [89 132 67 241 136 14 245 133 178 31 29 117 133 189 5 119 64 40 97 229]
+INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:29:46] ------Received ReadMsg------ 
+AddReady from: [89 132 67 241 136 14 245 133 178 31 29 117 133 189 5 119 64 40 97 229]
+INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:29:46] ------Received ReadMsg------ 
+AddReady from: [89 132 67 241 136 14 245 133 178 31 29 117 133 189 5 119 64 40 97 229]
+INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:29:46] ------Received ReadMsg------ 
+AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
+INFO [01-30|17:29:46] send Ready msg 
+INFO [01-30|17:29:46] send Ready msg 
+INFO [01-30|17:29:46] send Ready msg 
+INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:29:46] ------Received ReadMsg------ 
+INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:29:46] ------Received ReadMsg------ 
+AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
+AddReady from: [130 169 120 179 245 150 42 91 9 87 217 238 158 239 71 46 229 91 66 241]
+INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:29:46] ------Received ReadMsg------ 
+AddReady from: [220 236 234 243 252 92 10 99 209 149 214 155 26 144 1 27 123 25 101 13]
+INFO [01-30|17:29:46] send Ready msg 
+INFO [01-30|17:29:46] send Ready msg 
+INFO [01-30|17:29:46] send Ready msg 
+INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:29:46] ------Received ReadMsg------ 
+INFO [01-30|17:29:46] Handle BFT Msg,                          msg="msg #8 (78 bytes)"
+INFO [01-30|17:29:47] ------Received ReadMsg------ 
+AddReady from: [220 236 234 243 252 92 10 99 209 149 214 155 26 144 1 27 123 25 101 13]
+AddReady from: [220 236 234 243 252 92 10 99 209 149 214 155 26 144 1 27 123 25 101 13]
+INFO [01-30|17:30:59] Transaction pool price threshold updated price=18000000000
+INFO [01-30|17:30:59] Starting mining operation 
+INFO [01-30|17:30:59] ---atomic.LoadInt32(&self.mining) == 1 && work.tcount == 0--- 
+INFO [01-30|17:31:02] ---atomic.LoadInt32(&self.mining) == 1 && work.tcount == 0--- 

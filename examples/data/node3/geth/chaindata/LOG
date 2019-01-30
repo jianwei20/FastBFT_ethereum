@@ -1,6 +1,16 @@
-=============== Jan 20, 2019 (CST) ===============
-18:49:49.646910 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-18:49:49.647506 db@open opening
-18:49:49.648129 version@stat F·[] S·0B[] Sc·[]
-18:49:49.648448 db@janitor F·2 G·0
-18:49:49.648490 db@open done T·958.356µs
+=============== Jan 30, 2019 (CST) ===============
+17:29:43.642517 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+17:29:43.643498 db@open opening
+17:29:43.644415 version@stat F·[] S·0B[] Sc·[]
+17:29:43.645053 db@janitor F·2 G·0
+17:29:43.645190 db@open done T·1.587577ms
+=============== Jan 30, 2019 (CST) ===============
+17:29:45.960858 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+17:29:45.961202 version@stat F·[] S·0B[] Sc·[]
+17:29:45.961242 db@open opening
+17:29:45.961356 journal@recovery F·1
+17:29:45.965871 journal@recovery recovering @1
+17:29:45.970679 memdb@flush created L0@2 N·628 S·51KiB "\x02d\xfc..\x19Ba,v434":"\xfe\x88\xcf..H\xef\xcc,v363"
+17:29:45.976188 version@stat F·[1] S·51KiB[51KiB] Sc·[0.25]
+17:29:45.977748 db@janitor F·3 G·0
+17:29:45.977788 db@open done T·16.520033ms

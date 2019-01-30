@@ -1,9 +1,1 @@
-{"remiAddr": ["0xf5041b17522949ab72ccc79b0ff8fabcabaedf6a", "0x2c86eb149dd383a113893e74266dc938b0795981", "0x30d67a7c318b53a11a76ebef8a4bb9e76fe5a447", "0xb054176efeb3395e6bc49bd3a5cda89a277e57be", "0xc66ba86c4c043076296d54eb686247318ccd2f68"], "txCounts": 10000, "prvKeys": ["115c177851b44b15c5b618c30ff9c506ae896b0775931df6ff2a83b8b5e458b2", "da50fe387f9b76aa0659ca0050b1ff09fecea53bd31dc6596a9854ebfc6c0ff5", "815c2de87b52ac2a98bf084a2063f9408cf3f3cd90741354e5f375f55f2da8e3", "cba0ebc7efd5eb0f9f798c2f932e5cb76694f83e179f28663827ea10c2eeb11a", "c9d960dc47effff587f0e50078785081a6d5894461065ad33762fd7322b74080"], "ipcPort": ["./data/node1/geth.ipc", "./data/node2/geth.ipc", "./data/node3/geth.ipc", "./data/node4/geth.ipc", "./data/node5/geth.ipc"]}
-------start sendtx------
-panic: dial unix ./data/node1/geth.ipc: connect: no such file or directory
-
-goroutine 1 [running]:
-main.makeClient(0xc42009c240, 0x40, 0xc4200acda0, 0x15, 0x0, 0x6, 0xc4200be900)
-	/Users/sujianwei20/Desktop/FastBFT_ethereum/examples/ethclient/main.go:196 +0xc0
-main.main()
-	/Users/sujianwei20/Desktop/FastBFT_ethereum/examples/ethclient/main.go:273 +0x3c9
+nohup: ./ethclient/ethclient: No such file or directory

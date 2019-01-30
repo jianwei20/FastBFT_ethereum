@@ -24,6 +24,9 @@ done
 echo "---------writejson.py--------------"
 
 python writejson.py
+echo "---------writegensisjson.py--------------"
+
+python writegensis.py
 echo "-------go build ethclient-----------"
 go build ethclient/main.go
 
@@ -41,7 +44,9 @@ done
 chmod +x start1.sh
 ./start1.sh local ${1} 0
 
-./sendtx1.sh local ${1} 0
+nohup ./ethclient/ethclient ${1} &> sendtx.log &
+
+#./sendtx1.sh local ${1} 0
 
 
 
