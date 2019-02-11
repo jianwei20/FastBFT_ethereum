@@ -36,7 +36,8 @@ go build ethclient/main.go
 echo "setupEnv"
 ./setupEnv2.sh local ${1} 0
 chmod -R +x nodeConfig1/${1}nodes *
-#python writeStaticNodeJson.py ${1}
+
+python writeStaticNodeJson.py ${1}
 
 chmod +x start1.sh
 ./start1.sh local ${1} 0
@@ -56,15 +57,19 @@ chmod -R +x ./data1/node$i/static-nodes.json
 done
 chmod +x sendtx1.sh
 
-sleep 20.0
+#sleep 5.0
+#./sendtx1.sh local ${1}
 
-./sendtx1.sh local ${1}
 ./stop.sh
+
 
 ./start1.sh local ${1} 0
 sleep 20.0
-./run-miner.sh local ${1}
+./sendtx.sh local ${1}
+sleep 10.0
 
+./run-miner.sh local ${1}
+sleep 20.0
 
 
 

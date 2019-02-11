@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-
-# -*- coding: utf-8 -*-
 import json
 
 
@@ -12,7 +10,7 @@ def main():
         my_list.append(line.strip('\n').lstrip('"').strip('"'))
     print my_list
 
-    
+
 
     with open('static-nodes.json', 'w') as outfile:
         json.dump((my_list), outfile)

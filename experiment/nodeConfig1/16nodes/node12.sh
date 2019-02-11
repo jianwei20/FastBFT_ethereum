@@ -1,0 +1,1 @@
+../build/bin/geth --networkid 2234 --port 30314 --rpcport 8556 --datadir "data1/node12" --nodiscover --rpc --rpccorsdomain "*" --rpcapi "eth,net,web3,debug" --bft --allow-empty --num-validators 16 --node-num 11 
