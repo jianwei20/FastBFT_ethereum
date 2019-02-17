@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import json
-
+import sys
 
 
 genesisjson={
@@ -46,10 +46,9 @@ def main():
 
         #genesisjson["alloc"]+={i[2:]:{"balance": "0x1"}
 
-
-
+    print 'bloclsize::',sys.argv[1]
+    genesisjson["gasLimit"]=str(hex(int(sys.argv[1])*21000))
     print genesisjson
-
     with open('genesis.json', 'w') as outfile:
         json.dump(genesisjson, outfile)
 

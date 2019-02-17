@@ -1,5 +1,6 @@
 !/bin/bash
-# $1 number of the node 
+# $1 number of the node
+# $2 size of block 
 rm -rf newkey
 rm Address.txt
 rm Key.txt
@@ -24,7 +25,7 @@ for entry in `ls newkey/keystore  $search_dir`; do
 done
 echo "---------writegensisjson.py--------------"
 
-python writegenesis.py
+python writegenesis.py ${2}
 
 
 echo "---------writejson.py--------------"
