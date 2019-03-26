@@ -8,6 +8,9 @@ rm Key.txt
 rm publicKey.txt
 rm publicKey1.txt
 rm sendtx.log
+rm node*.sh 
+rm -rf nodeConfig1/${1}nodes
+mkdir nodeConfig1/${1}nodes
 
 
 ./stop.sh
@@ -24,3 +27,4 @@ for entry in `ls newkey/keystore  $search_dir`; do
      node getPrivatekey1.js $entry
 	 echo "$entry">>publicKey.txt
 done
+
