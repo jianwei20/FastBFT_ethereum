@@ -38,7 +38,7 @@ def nsfile(s):
 --node-num '+str(i-1)+' '
 
       f.write(testnote)
-        k+=1
+      k+=1
       f.close()
       print filename
       time.sleep(1)
