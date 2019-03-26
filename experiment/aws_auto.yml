@@ -1,0 +1,27 @@
+---
+- hosts: geth-nodes
+  tasks:
+    - name: Execute aws_auto1.sh to create ether accounts.
+      command: bash /home/ubuntu/FastBFT_ethereum/experiment/aws_auto.sh 4 200 2
+      args:
+          chdir: /home/ubuntu/FastBFT_ethereum/experiment
+      register: shell_result
+    - debug: msg="{{ shell_result.stdout }}"
+
+- hosts: ct
+  tasks:
+    - name: Execute getAddress.sh to get all nodes informations.
+      command: bash /home/ubuntu/FastBFT_ethereum/experiment/getAddres.sh 4 200 2
+      args:
+          chdir: /home/ubuntu/FastBFT_ethereum/experiment
+      register: shell_result
+    - debug: msg="{{ shell_result.stdout }}"
+
+- hosts: geth-nodes
+  tasks:
+    - name: Execute aws_auto2.sh to create ether env.
+      command: bash /home/ubuntu/FastBFT_ethereum/experiment/aws_auto2.sh 4 200 2
+      args:
+          chdir: /home/ubuntu/FastBFT_ethereum/experiment
+      register: shell_result
+    - debug: msg="{{ shell_result.stdout }}"
