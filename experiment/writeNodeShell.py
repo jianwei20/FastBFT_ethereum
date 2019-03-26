@@ -52,7 +52,7 @@ def nsfile(s):
 --networkid 2234 \
 --port '+str(30302+k)+' \
 --rpcport '+str(8544+k)+' \
---datadir "data1/node'+str(i)+'"'+' \
+--datadir "data1/node'+str(k)+'"'+' \
 --nodiscover \
 --rpc \
 --rpccorsdomain "*" \
