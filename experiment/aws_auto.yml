@@ -25,3 +25,13 @@
           chdir: /home/ubuntu/FastBFT_ethereum/experiment
       register: shell_result
     - debug: msg="{{ shell_result.stdout }}"
+
+- hosts: ct
+  tasks:
+    - name: Execute Start all nodes.
+      command: bash /home/ubuntu/FastBFT_ethereum/experiment/aws_start1 4 200 2
+      args:
+          chdir: /home/ubuntu/FastBFT_ethereum/experiment
+      register: shell_result
+    - debug: msg="{{ shell_result.stdout }}"
+
