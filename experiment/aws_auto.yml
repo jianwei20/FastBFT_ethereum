@@ -28,7 +28,7 @@
 
 - hosts: ct
   tasks:
-    - name: Execute Start all nodes.
+    - name: Execute Start all nodes produce the enodeid,and merge the static-nodes.json return back each server.
       command: bash /home/ubuntu/FastBFT_ethereum/experiment/aws_start1 4 200 2
       args:
           chdir: /home/ubuntu/FastBFT_ethereum/experiment

@@ -14,12 +14,4 @@ cp ./newkey/keystore/${entry}  ./data1/node${x}/keystore
 x=$((x+1))
 done
 
-sleep 1.0
-
-echo "------In start.sh, start ${2} nodes------"
-
-for ((i=1;i<${3}+1;i++));
-do
-nohup ./node${i}.sh &> data1/n${i}.log &
-done
 
