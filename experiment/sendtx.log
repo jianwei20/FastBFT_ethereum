@@ -1,9 +1,0 @@
-{"remiAddr": ["0xafac00cf0366a90a934e53339dcd65ad0c7474d0", "0x9fee05e106cf0b2833262e4497af14a4a5eeecf9", "0xc68c2ee2f1ad5de7cc6469c35ef27b6919f65c54"], "txCounts": 10000, "prvKeys": ["62cafbbf89a9965580f3847815e4c783f68d03d4a0703d85868074ba1210a475", "b05f38bb1243da3018a2fca2c808364812faac3b9316c41fdaabe7b7e6859efc", "27d455d0ad81d0344102691ae7d487de432b4fac5726be0001d1888fe1772d56"], "ipcPort": ["./data1/node1/geth.ipc", "./data1/node2/geth.ipc", "./data1/node3/geth.ipc"]}
-------start sendtx------
-panic: dial unix ./data1/node1/geth.ipc: connect: no such file or directory
-
-goroutine 1 [running]:
-main.makeClient(0xc420014640, 0x40, 0xc4200130a0, 0x16, 0x0, 0x4, 0xc420059d00)
-	/Users/jianweisu/Desktop/Ethereum/FastBFT_ethereum/experiment/ethclient/main.go:196 +0xc0
-main.main()
-	/Users/jianweisu/Desktop/Ethereum/FastBFT_ethereum/experiment/ethclient/main.go:273 +0x3c9

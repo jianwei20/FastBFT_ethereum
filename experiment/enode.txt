@@ -1,3 +1,6 @@
 Fatal: Unable to attach to remote geth: dial unix ./data1/node1/geth.ipc: connect: no such file or directory
 Fatal: Unable to attach to remote geth: dial unix ./data1/node2/geth.ipc: connect: no such file or directory
 Fatal: Unable to attach to remote geth: dial unix ./data1/node3/geth.ipc: connect: no such file or directory
+Fatal: Unable to attach to remote geth: dial unix ./data1/node4/geth.ipc: connect: no such file or directory
+Fatal: Unable to attach to remote geth: dial unix ./data1/node5/geth.ipc: connect: no such file or directory
+Fatal: Unable to attach to remote geth: dial unix ./data1/node6/geth.ipc: connect: no such file or directory
