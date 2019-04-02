@@ -1,0 +1,4 @@
+- hosts: geth-nodes
+  tasks:
+      - name: Execute script
+        script: /home/ubuntu/FastBFT_ethereum/experiment/stop.sh
