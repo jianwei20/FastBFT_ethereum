@@ -269,7 +269,7 @@ func (pm *ProtocolManager) handleBFTMsg(p *peer) error {
 		if p.broadcastFilter.Has(bp.Hash()) {
 			return nil
 		}
-		if isValid := pm.consensusManager.sectMsig(bp, p); isValid {
+		if isValid := pm.consensusManager.collectMsig(bp, p); isValid {
 			log.Info("-------in handle NewBlockProposalMsg, success!-------")
 		} else {
 			return nil
@@ -309,11 +309,10 @@ func (pm *ProtocolManager) handleBFTMsg(p *peer) error {
 		fmt.Println("mpHR:", "H:", mp.Height, "R:", mp.Round, "hash:", mp.Blockhash())
 		fmt.Println("cmHR:", "H:", pm.consensusManager.Height(), "R:", pm.consensusManager.Round())
 		log.Info("---------------------------------------")
-		/*
+
 		if isValid := pm.consensusManager.AddMsigProposal(mp, p); isValid {
 			log.Info("------addmsigproposal success!-------")
 		}
-		*/
 	case msg.Code == VoteMsg:
 		log.Info("------Received VoteMsg------")
 		var vData voteData
