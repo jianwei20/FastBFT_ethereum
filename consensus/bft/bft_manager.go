@@ -615,14 +615,14 @@ func (cm *ConsensusManager) SendReady(force bool) {
 func (cm *ConsensusManager) AddReady(ready *btypes.Ready) {
 	cc := cm.contract
 	addr, err := ready.From()
-	fmt.Println("AddReady from:", addr)
+	//fmt.Println("AddReady from:", addr)
 	if err != nil {
 		log.Error("AddReady err ", "err", err)
 		return
 	}
 	if !cc.isValidators(addr) {
 		log.Debug(addr.Hex())
-		log.Debug("receive ready from invalid sender")
+		//log.Debug("receive ready from invalid sender")
 		return
 	}
 	if _, ok := cm.readyValidators[addr]; !ok {
