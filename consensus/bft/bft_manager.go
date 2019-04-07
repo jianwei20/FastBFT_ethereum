@@ -48,50 +48,9 @@ func (cc *ConsensusContract) proposer(height uint64, round uint64) common.Addres
 
 func (cc *ConsensusContract) msigProposers(height uint64, round uint64) []common.Address {
 	msigNum := (int((len(cc.validators) - 1) / 3)) // numbers of msig proposer, i.e., f (does not include proposer)
-	fmt.Println("len(cc.validators)=",len(cc.validators),"len((cc.validators) - 1) / 3))",int((len(cc.validators) - 1) / 3))
 	msigProposers := make([]common.Address, msigNum)
 	proposerIndex := chosen(height, round, len(cc.validators))
-	//msigProposers[0] = cc.validators[(proposerIndex+1)%4]
-
-fmt.Println("proposerIndex=",proposerIndex,"proposerIndex+1=",proposerIndex+1,"proposerIndex+1)%4",(proposerIndex+1)%4)
-j:=0
-for i := 0; i < len(cc.validators); i++ {
-	fmt.Println("vali ",i,"= ",cc.validators[i])
-	}
-for i:=0 ;i<len(cc.validators);i++{
-if((cc.validators[(proposerIndex)]!=cc.validators[i])&&(j<msigNum)){
-msigProposers[j]=cc.validators[i]
-j++
-}else{
-fmt.Println("NO")
-}	
-}
-
-/*
- s :=[] int {1,2,3,4,5,6,7,8} //va
- p := make([]int,3)//ms
-a:=2
-
-j:=0
-for i:=0;i<len(s);i++{ 
-
-if((a!=s[i])&&(j<3)){
-p[j]=s[i]
-fmt.Println("i=",i ," j=",j,p[j],len(p))
-j++
-}else{
-fmt.Println("NO")
-}
-}
-fmt.Println(p)
-
-
-
-
-*/
-
-fmt.Println("msigProposers = ",msigProposers)
-
+	msigProposers[0] = cc.validators[(proposerIndex+1)%4]
 	return msigProposers
 }
 
@@ -615,14 +574,14 @@ func (cm *ConsensusManager) SendReady(force bool) {
 func (cm *ConsensusManager) AddReady(ready *btypes.Ready) {
 	cc := cm.contract
 	addr, err := ready.From()
-	//fmt.Println("AddReady from:", addr)
+	fmt.Println("AddReady from:", addr)
 	if err != nil {
 		log.Error("AddReady err ", "err", err)
 		return
 	}
 	if !cc.isValidators(addr) {
 		log.Debug(addr.Hex())
-		//log.Debug("receive ready from invalid sender")
+		log.Debug("receive ready from invalid sender")
 		return
 	}
 	if _, ok := cm.readyValidators[addr]; !ok {
@@ -712,6 +671,74 @@ func (cm *ConsensusManager) AddMsigProposal(mp btypes.Proposal, peer *peer) bool
 	cm.getHeightMu.Unlock()
 	return isValid
 }
+
+
+
+
+
+
+
+func (cm *ConsensusManager) sectMsig(p btypes.Proposal, peer *peer) bool {
+// collect multisignature
+	// 1. valid proposal
+	// 2. only one proposal
+	// 3. add msig
+log.Info("-----------add proposal and send vote------")
+	if p == nil {
+		panic("nil peer in cm AddProposal")
+	}
+	addr, err := p.From()
+	if err != nil {
+		log.Info("proposal sender error ", "err", err)
+		return false
+	}
+	if !cm.contract.isProposer(p) {
+		log.Info("proposal sender invalid", cm.contract.isProposer(p))
+		return false
+	}
+	if _, ok := cm.readyValidators[addr]; !ok {
+		cm.writeMapMu.Lock()
+		cm.readyValidators[addr] = struct{}{}
+		cm.writeMapMu.Unlock()
+	}
+	ls := p.LockSet()
+	if !ls.IsValid() && ls.EligibleVotesNum != 0 {
+		log.Info("proposal lockset invalid")
+		return false
+	}
+	switch proposal := p.(type) {
+	case *btypes.BlockProposal:
+		if !cm.verifyBlockProposal(proposal) {
+			return false
+		}
+	case *btypes.VotingInstruction:
+		if !cm.verifyVotingInstruction(proposal) {
+			return false
+		}
+	}
+	cm.getHeightMu.Lock()
+	cm.getHeightManager(p.GetHeight()).collectMsig(p)
+	
+	if p.GetHeight() > cm.Height() {
+		cm.synchronizer.request(cm.Height(), p.GetHeight())
+	}
+
+	if p.GetBlock() == nil {
+		log.Info("In cm.sentMsig, proposal.GetBlock is nil")
+	}
+
+	hm := cm.getHeightManager(p.GetHeight())
+	rm := hm.getRoundManager(p.GetRound())
+
+	rm.proposerPeer = peer
+	cm.addBlockCandidates(p)
+    mp, _ := btypes.NewMsigProposal(cm.Height(), cm.Round(), p)
+	isValid := cm.getHeightManager(mp.GetHeight()).addMsigProposal(mp)
+	cm.getHeightMu.Unlock()
+	return isValid
+
+
+	}
 
 func (cm *ConsensusManager) collectMsig(p btypes.Proposal, peer *peer) bool {
 	// collect multisignature
@@ -1072,7 +1099,7 @@ func (rm *RoundManager) addVote(vote *btypes.Vote, force_replace bool) bool {
 func (rm *RoundManager) addMsigProposal(p btypes.Proposal) bool {
 	rm.roundProcessMu.Lock()
 	defer rm.roundProcessMu.Unlock()
-	log.Debug("addMsigProposal in ", rm.round, p)
+	log.Info("addMsigProposal in ", rm.round, p)
 	if rm.mProposal == nil {
 		rm.mProposal = p
 		return true
