@@ -37,7 +37,7 @@ func NewConsensusContract(eventMux *event.TypeMux, coinbase common.Address, txpo
 }
 
 func chosen(h uint64, r uint64, length int) int {
-	sum := h - r
+	sum := int(h) - int(r)
 	return int(math.Abs(float64(sum))) % length
 }
 
@@ -48,9 +48,50 @@ func (cc *ConsensusContract) proposer(height uint64, round uint64) common.Addres
 
 func (cc *ConsensusContract) msigProposers(height uint64, round uint64) []common.Address {
 	msigNum := (int((len(cc.validators) - 1) / 3)) // numbers of msig proposer, i.e., f (does not include proposer)
+	fmt.Println("len(cc.validators)=",len(cc.validators),"len((cc.validators) - 1) / 3))",int((len(cc.validators) - 1) / 3))
 	msigProposers := make([]common.Address, msigNum)
 	proposerIndex := chosen(height, round, len(cc.validators))
-	msigProposers[0] = cc.validators[(proposerIndex+1)%4]
+	//msigProposers[0] = cc.validators[(proposerIndex+1)%4]
+
+fmt.Println("proposerIndex=",proposerIndex,"proposerIndex+1=",proposerIndex+1,"proposerIndex+1)%4",(proposerIndex+1)%4)
+j:=0
+for i := 0; i < len(cc.validators); i++ {
+	fmt.Println("vali ",i,"= ",cc.validators[i])
+	}
+for i:=0 ;i<len(cc.validators);i++{
+if((cc.validators[(proposerIndex)]!=cc.validators[i])&&(j<msigNum)){
+msigProposers[j]=cc.validators[i]
+j++
+}else{
+fmt.Println("NO")
+}	
+}
+
+/*
+ s :=[] int {1,2,3,4,5,6,7,8} //va
+ p := make([]int,3)//ms
+a:=2
+
+j:=0
+for i:=0;i<len(s);i++{ 
+
+if((a!=s[i])&&(j<3)){
+p[j]=s[i]
+fmt.Println("i=",i ," j=",j,p[j],len(p))
+j++
+}else{
+fmt.Println("NO")
+}
+}
+fmt.Println(p)
+
+
+
+
+*/
+
+fmt.Println("msigProposers = ",msigProposers)
+
 	return msigProposers
 }
 
@@ -574,7 +615,7 @@ func (cm *ConsensusManager) SendReady(force bool) {
 func (cm *ConsensusManager) AddReady(ready *btypes.Ready) {
 	cc := cm.contract
 	addr, err := ready.From()
-	fmt.Println("AddReady from:", addr)
+	//fmt.Println("AddReady from:", addr)
 	if err != nil {
 		log.Error("AddReady err ", "err", err)
 		return
@@ -619,7 +660,9 @@ func (cm *ConsensusManager) AddVote(v *btypes.Vote) bool {
 func (cm *ConsensusManager) AddMsigProposal(mp btypes.Proposal, peer *peer) bool {
 	// 1. block hasValid sig
 	// 2. push block into blockCandidates without msig
-	log.Debug("--------------in AddMsigProposal----------------")
+	//log.Debug("--------------in AddMsigProposal----------------")
+	
+	log.Info("----------------------in AddMsigProposal--------------------------")
 	addr, err := mp.From()
 	if err != nil {
 		log.Debug("msigproposal sender error", "err", err)
@@ -640,6 +683,7 @@ func (cm *ConsensusManager) AddMsigProposal(mp btypes.Proposal, peer *peer) bool
 	}
 	if cm.contract.isMsigProposer(mp, cm.coinbase) {
 		err := mp.Msign(cm.privkey, cm.coinbase)
+		log.Info("in addMsig, i am msig proposer")
 		if err != nil {
 			log.Debug("in AddMsigProposal, msig failed")
 			return false
@@ -657,6 +701,7 @@ func (cm *ConsensusManager) AddMsigProposal(mp btypes.Proposal, peer *peer) bool
 		log.Debug("msigProposal have not finished yet")
 		return false
 	}
+
 	cm.getHeightMu.Lock()
 	isValid := cm.getHeightManager(mp.GetHeight()).addMsigProposal(mp)
 	if !isValid {

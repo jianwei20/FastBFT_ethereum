@@ -207,7 +207,7 @@ func (pm *ProtocolManager) announce() {
 func (pm *ProtocolManager) handleBFTMsg(p *peer) error {
 	// Read the next message from the remote peer, and ensure it's fully consumed
 	msg, err := p.rw.ReadMsg()
-	log.Info("Handle BFT Msg,", "msg", msg)
+	//log.Info("Handle BFT Msg,", "msg", msg)
 	if err != nil {
 		return err
 	}
@@ -296,6 +296,7 @@ func (pm *ProtocolManager) handleBFTMsg(p *peer) error {
 		}
 	case msg.Code == MsigProposalMsg:
 		log.Info("------Received MsigProposalMsg------")
+
 		var mpData msigProposalData
 		if err := msg.Decode(&mpData); err != nil {
 			return errResp(ErrDecode, "%v: %v", msg, err)
@@ -304,6 +305,7 @@ func (pm *ProtocolManager) handleBFTMsg(p *peer) error {
 		if mp == nil {
 			log.Info("mp is nil")
 		}
+		fmt.Println("mp=",mp)
 		fmt.Println("mpHR:", "H:", mp.Height, "R:", mp.Round, "hash:", mp.Blockhash())
 		fmt.Println("cmHR:", "H:", pm.consensusManager.Height(), "R:", pm.consensusManager.Round())
 		log.Info("---------------------------------------")
@@ -333,7 +335,7 @@ func (pm *ProtocolManager) handleBFTMsg(p *peer) error {
 			log.Info("------in handle VoteMsg, success!------")
 		}
 	case msg.Code == ReadyMsg:
-		log.Info("------Received ReadMsg------")
+		//log.Info("------Received ReadMsg------")
 		var r readyData
 		if err := msg.Decode(&r); err != nil {
 			log.Info("err: ", err)
@@ -356,7 +358,7 @@ func (pm *ProtocolManager) BroadcastBFTMsg(msg interface{}) {
 		peers := pm.peers.PeersWithoutHash(m.Hash())
 		// log.Info("There are ", "peer count", len(peers))
 		for _, peer := range peers {
-			log.Info("send Ready msg")
+			//log.Info("send Ready msg")
 			err = peer.SendReadyMsg(m)
 			if err != nil {
 				log.Info("err: ", err)
