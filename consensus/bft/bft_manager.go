@@ -697,10 +697,10 @@ func (cm *ConsensusManager) AddMsigProposal(mp btypes.Proposal, peer *peer) bool
 		cm.writeMapMu.Unlock()
 	}
 
-	if !mp.MsigFinished(cm.contract.msigProposers(mp.GetHeight(), mp.GetRound())) {
-		log.Debug("msigProposal have not finished yet")
-		return false
-	}
+	//if !mp.MsigFinished(cm.contract.msigProposers(mp.GetHeight(), mp.GetRound())) {
+	//	log.Debug("msigProposal have not finished yet")
+	//	return false
+	//}
 
 	cm.getHeightMu.Lock()
 	isValid := cm.getHeightManager(mp.GetHeight()).addMsigProposal(mp)
