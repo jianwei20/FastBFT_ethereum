@@ -1,0 +1,9 @@
+- hosts: geth-nodes
+  tasks:
+    - name: run miner.
+      command: bash /home/ubuntu/FastBFT_ethereum/experiment/aws_run1.sh "{{total}}" "{{size}}" "{{each}}"
+      args:
+          chdir: /home/ubuntu/FastBFT_ethereum/experiment
+      register: shell_result
+    - debug: msg="{{ shell_result.stdout }}"
+

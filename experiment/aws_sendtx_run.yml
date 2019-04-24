@@ -1,0 +1,8 @@
+- hosts: geth-nodes
+  tasks:
+    - name: Sendtx.
+      command: bash /home/ubuntu/FastBFT_ethereum/experiment/sendtx.sh "{{total}}" "{{size}}" "{{each}}"
+      args:
+          chdir: /home/ubuntu/FastBFT_ethereum/experiment
+    - debug: msg="{{ shell_result.stdout }}"
+
