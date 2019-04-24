@@ -28,6 +28,7 @@ def nsfile(s):
 --rpcport '+str(8544+k)+' \
 --datadir "data1/node'+str(k)+'"'+' \
 --nodiscover \
+--maxpeers '+str(s)+' \
 --rpc \
 --rpccorsdomain "*" \
 --rpcapi "eth,net,web3,debug" \
@@ -54,6 +55,7 @@ def nsfile(s):
 --rpcport '+str(8544+k)+' \
 --datadir "data1/node'+str(k)+'"'+' \
 --nodiscover \
+--maxpeers '+str(s)+' \
 --rpc \
 --rpccorsdomain "*" \
 --rpcapi "eth,net,web3,debug" \
