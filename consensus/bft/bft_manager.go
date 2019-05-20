@@ -1023,7 +1023,7 @@ func NewRoundManager(heightmanager *HeightManager, round uint64) *RoundManager {
 		round:            round,
 		height:           heightmanager.height,
 		lockset:          lockset,
-		timeoutTime:      0,
+		timeoutTime:      1000,
 		timeoutPrecommit: 0,
 		proposal:         nil,
 		mProposal:        nil,
@@ -1034,7 +1034,7 @@ func NewRoundManager(heightmanager *HeightManager, round uint64) *RoundManager {
 
 func (rm *RoundManager) getTimeout() float64 {
 	if rm.timeoutTime != 0 {
-		return 0
+		return 1000
 	}
 	now := rm.cm.Now()
 	roundTimeout := rm.cm.roundTimeout
