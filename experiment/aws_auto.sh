@@ -24,7 +24,7 @@ echo "-------chmod +x-----------"
 chmod -R +x newkey/keystore 
 echo "-----save private key to Key.txt---"
 for entry in `ls newkey/keystore  $search_dir`; do
-     /home/ubuntu/.nvm/versions/node/v12.2.0/bin/node getPrivatekey1.js $entry
+     /home/ubuntu/.nvm/versions/node/v12.3.0/bin/node getPrivatekey1.js $entry
 	 echo "$entry">>publicKey.txt
 done
 
