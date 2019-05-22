@@ -195,7 +195,7 @@ func NewConsensusManager(manager *ProtocolManager, chain *core.BlockChain, db et
 		pm:                 manager,
 		isAllowEmptyBlocks: false,
 		numInitialBlocks:   10,
-		roundTimeout:       5,
+		roundTimeout:       50000,
 		roundTimeoutFactor: 1.5,
 		transactionTimeout: 0.5,
 		hdcDb:              db,
