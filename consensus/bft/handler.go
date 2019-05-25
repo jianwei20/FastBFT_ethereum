@@ -269,7 +269,7 @@ func (pm *ProtocolManager) handleBFTMsg(p *peer) error {
 		if p.broadcastFilter.Has(bp.Hash()) {
 			return nil
 		}
-		if isValid := pm.consensusManager.collectMsig(bp, p); isValid {
+		if isValid := pm.consensusManager.voteMsig(bp, p); isValid {
 			log.Info("-------in handle NewBlockProposalMsg, success!-------")
 		} else {
 			return nil

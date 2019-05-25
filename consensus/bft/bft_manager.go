@@ -90,7 +90,7 @@ fmt.Println(p)
 
 */
 
-fmt.Println("msigProposers = ",msigProposers)
+//fmt.Println("msigProposers = ",msigProposers)
 
 	return msigProposers
 }
@@ -712,6 +712,67 @@ func (cm *ConsensusManager) AddMsigProposal(mp btypes.Proposal, peer *peer) bool
 	cm.getHeightMu.Unlock()
 	return isValid
 }
+func (cm *ConsensusManager) voteMsig(p btypes.Proposal, peer *peer) bool {
+
+
+fmt.Println("------------in voteMsig---------------")
+	if p == nil {
+		panic("nil peer in cm AddProposal")
+	}
+	addr, err := p.From()
+	if err != nil {
+		log.Info("proposal sender error ", "err", err)
+		return false
+	}
+	if !cm.contract.isProposer(p) {
+		log.Info("proposal sender invalid", cm.contract.isProposer(p))
+		return false
+	}
+	if _, ok := cm.readyValidators[addr]; !ok {
+		cm.writeMapMu.Lock()
+		cm.readyValidators[addr] = struct{}{}
+		cm.writeMapMu.Unlock()
+	}
+	ls := p.LockSet()
+	if !ls.IsValid() && ls.EligibleVotesNum != 0 {
+		log.Info("proposal lockset invalid")
+		return false
+	}
+	switch proposal := p.(type) {
+	case *btypes.BlockProposal:
+		if !cm.verifyBlockProposal(proposal) {
+			return false
+		}
+	case *btypes.VotingInstruction:
+		if !cm.verifyVotingInstruction(proposal) {
+			return false
+		}
+	}
+	cm.getHeightMu.Lock()
+	cm.getHeightManager(p.GetHeight()).collectMsig(p)
+
+	if p.GetHeight() > cm.Height() {
+		cm.synchronizer.request(cm.Height(), p.GetHeight())
+	}
+
+	if p.GetBlock() == nil {
+		log.Info("In cm.sentMsig, proposal.GetBlock is nil")
+	}
+
+	hm := cm.getHeightManager(p.GetHeight())
+	rm := hm.getRoundManager(p.GetRound())
+
+	rm.proposerPeer = peer
+	cm.addBlockCandidates(p)
+    mp, _ := btypes.NewMsigProposal(cm.Height(), cm.Round(), p)
+	isValid := cm.getHeightManager(mp.GetHeight()).addMsigProposal(mp)
+	cm.getHeightMu.Unlock()
+	return isValid
+
+}
+
+
+
 
 func (cm *ConsensusManager) collectMsig(p btypes.Proposal, peer *peer) bool {
 	// collect multisignature
@@ -790,6 +851,11 @@ func (cm *ConsensusManager) collectMsig(p btypes.Proposal, peer *peer) bool {
 	cm.getHeightMu.Unlock()
 	return isValid
 }
+
+
+
+
+
 
 func (cm *ConsensusManager) verifyBlockProposal(bp *btypes.BlockProposal) bool {
 	log.Info("cm add BlockProposal", "h", bp.Height, "r", bp.Round)
