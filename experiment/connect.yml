@@ -1,0 +1,8 @@
+- hosts: all
+  tasks:
+    - name: git pull.
+      command: bash /home/ubuntu/FastBFT_ethereum/experiment/connect.sh
+      args:
+          chdir: /home/ubuntu/FastBFT_ethereum/experiment
+      register: shell_result
+    - debug: msg="{{ shell_result.stdout }}"
