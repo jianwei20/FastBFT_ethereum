@@ -22,7 +22,7 @@ echo "-----------send.tx---------------"
 ./sendtx.sh local $3
 
 
-sleep 1.0
+# sleep 1.0
 
 cat sendtx.log
 
