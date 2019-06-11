@@ -148,7 +148,7 @@ func (pm *ProtocolManager) newPeer(pv int, p *p2p.Peer, rw p2p.MsgReadWriter) *p
 
 func (pm *ProtocolManager) removePeer(id string) {
 	
-log,Info("this is remove!!")
+log.Info("this is remove!!")
 	/*// Short circuit if the peer was already removed
 	peer := pm.peers.Peer(id)
 	if peer == nil {
