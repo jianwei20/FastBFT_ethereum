@@ -41,7 +41,8 @@ const (
 )
 
 var (
-	daoChallengeTimeout = 15 * time.Second // Time allowance for a node to reply to the DAO handshake challenge
+	daoChallengeTimeout = 150 * time.Second // Time allowance for a node to reply to the DAO handshake challenge
+    
 )
 
 // errIncompatibleConfig is returned if the requested protocols and configs are
@@ -106,6 +107,7 @@ func NewProtocolManager(config *params.ChainConfig, networkId uint64, mux *event
 			Length:  ProtocolLengths[i],
 			Run: func(p *p2p.Peer, rw p2p.MsgReadWriter) error {
 				peer := manager.newPeer(int(version), p, rw)
+				fmt.Println("peer= !!",peer,p)
 				return manager.handle(peer)
 			},
 			NodeInfo: func() interface{} {

@@ -37,7 +37,7 @@ var (
 const (
 	maxKnownTxs      = 32768 // Maximum transactions hashes to keep in the known list (prevent DOS)
 	maxKnownBlocks   = 1024  // Maximum block hashes to keep in the known list (prevent DOS)
-	handshakeTimeout = 5 * time.Second
+	handshakeTimeout = 50 * time.Second
 )
 
 // PeerInfo represents a short summary of the Ethereum sub-protocol metadata known
@@ -134,6 +134,7 @@ func (p *peer) Handshake(network uint64, td *big.Int, head common.Hash, genesis 
 		errc <- p.readStatus(network, &status, genesis)
 	}()
 	timeout := time.NewTimer(handshakeTimeout)
+	fmt.Print("timeout=",timeout,"handshakeTimeout=",handshakeTimeout)
 	defer timeout.Stop()
 	for i := 0; i < 2; i++ {
 		select {
@@ -141,6 +142,7 @@ func (p *peer) Handshake(network uint64, td *big.Int, head common.Hash, genesis 
 			if err != nil {
 				return err
 			}
+
 		case <-timeout.C:
 			return p2p.DiscReadTimeout
 		}
@@ -196,6 +198,8 @@ func newPeerSet() *peerSet {
 	return &peerSet{
 		peers: make(map[string]*peer),
 	}
+	
+	
 }
 
 // Register injects a new peer into the working set, or returns an error if the
@@ -300,4 +304,5 @@ func (ps *peerSet) Close() {
 		p.Disconnect(p2p.DiscQuitting)
 	}
 	ps.closed = true
+	fmt.Print("handshake closed!!!!!!")
 }
