@@ -1,4 +1,4 @@
-- hosts: all
+- hosts: geth-nodes
   tasks:
     - name: git pull.
       command: bash /home/ubuntu/FastBFT_ethereum/experiment/connect.sh
