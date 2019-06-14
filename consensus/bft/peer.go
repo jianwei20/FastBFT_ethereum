@@ -37,7 +37,7 @@ var (
 const (
 	maxKnownTxs      = 32768 // Maximum transactions hashes to keep in the known list (prevent DOS)
 	maxKnownBlocks   = 1024  // Maximum block hashes to keep in the known list (prevent DOS)
-	handshakeTimeout = 50 * time.Second
+	handshakeTimeout = 500 * time.Second
 )
 
 // PeerInfo represents a short summary of the Ethereum sub-protocol metadata known
