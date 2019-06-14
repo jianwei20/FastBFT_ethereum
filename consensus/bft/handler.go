@@ -174,6 +174,7 @@ func (pm *ProtocolManager) handle(p *peer) error {
 	td, head, genesis := pm.blockchain.Status()
 	if err := p.Handshake(pm.networkId, td, head, genesis); err != nil {
 		p.Log().Debug("Ethereum handshake failed", "err", err)
+		fmt.Println("Ethereum handshake failed", "err", err)
 		return err
 	}
 	if rw, ok := p.rw.(*meteredMsgReadWriter); ok {
@@ -182,6 +183,7 @@ func (pm *ProtocolManager) handle(p *peer) error {
 	// Register the peer locally
 	if err := pm.peers.Register(p); err != nil {
 		p.Log().Error("Ethereum peer registration failed", "err", err)
+		fmt.Println("Ethereum peer registration failed", "err", err)
 		return err
 	}
 	defer pm.removePeer(p.id)
@@ -189,6 +191,7 @@ func (pm *ProtocolManager) handle(p *peer) error {
 	for {
 		if err := pm.handleBFTMsg(p); err != nil {
 			p.Log().Info("Ethereum message handling failed", "err", err)
+			fmt.Println("Ethereum message handling failed", "err", err)
 			return err
 		}
 	}
