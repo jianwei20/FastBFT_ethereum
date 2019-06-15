@@ -297,6 +297,7 @@ func (ps *peerSet) BestPeer() *peer {
 // Close disconnects all peers.
 // No new peers can be registered after Close has returned.
 func (ps *peerSet) Close() {
+	/*
 	ps.lock.Lock()
 	defer ps.lock.Unlock()
 
@@ -304,5 +305,6 @@ func (ps *peerSet) Close() {
 		p.Disconnect(p2p.DiscQuitting)
 	}
 	ps.closed = true
+	*/
 	fmt.Print("handshake closed!!!!!!")
 }
