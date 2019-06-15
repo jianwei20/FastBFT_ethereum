@@ -50,6 +50,7 @@ var (
 var errIncompatibleConfig = errors.New("incompatible configuration")
 
 func errResp(code errCode, format string, v ...interface{}) error {
+	fmt.Println("%v - %v", code, fmt.Sprintf(format, v...))
 	return fmt.Errorf("%v - %v", code, fmt.Sprintf(format, v...))
 }
 
@@ -343,10 +344,12 @@ func (pm *ProtocolManager) handleBFTMsg(p *peer) error {
 			log.Info("------in handle VoteMsg, success!------")
 		}
 	case msg.Code == ReadyMsg:
-		//log.Info("------Received ReadMsg------")
+		log.Info("------Received ReadMsg------")
 		var r readyData
 		if err := msg.Decode(&r); err != nil {
 			log.Info("err: ", err)
+			fmt.Println("err=",ErrDecode, "%v: %v", msg, err)
+
 			return errResp(ErrDecode, "%v: %v", msg, err)
 		}
 		ready := r.Ready

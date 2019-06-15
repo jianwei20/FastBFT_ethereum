@@ -596,7 +596,8 @@ func (cm *ConsensusManager) broadcast(msg interface{}) {
 
 func (cm *ConsensusManager) isReady() bool {
 	fmt.Println("ready:", len(cm.readyValidators), "need:", float32(len(cm.contract.validators))*2.0/3.0)
-	return float32(len(cm.readyValidators)) > float32(len(cm.contract.validators))*2.0/3.0
+	//return float32(len(cm.readyValidators)) > float32(len(cm.contract.validators))*2.0/3.0
+	return true
 }
 
 func (cm *ConsensusManager) SendReady(force bool) {
@@ -618,11 +619,13 @@ func (cm *ConsensusManager) AddReady(ready *btypes.Ready) {
 	//fmt.Println("AddReady from:", addr)
 	if err != nil {
 		log.Error("AddReady err ", "err", err)
+		fmt.Println("AddReady err ", "err", err)
 		return
 	}
 	if !cc.isValidators(addr) {
 		log.Debug(addr.Hex())
 		log.Debug("receive ready from invalid sender")
+		fmt.Println("receive ready from invalid sender")
 		return
 	}
 	if _, ok := cm.readyValidators[addr]; !ok {
