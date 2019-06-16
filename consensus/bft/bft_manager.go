@@ -614,14 +614,16 @@ func (cm *ConsensusManager) SendReady(force bool) {
 }
 
 func (cm *ConsensusManager) AddReady(ready *btypes.Ready) {
+	/*
 	cc := cm.contract
 	addr, err := ready.From()
-	//fmt.Println("AddReady from:", addr)
+	fmt.Println("AddReady from:", addr)
 	if err != nil {
 		log.Error("AddReady err ", "err", err)
 		fmt.Println("AddReady err ", "err", err)
 		return
 	}
+	/*
 	if !cc.isValidators(addr) {
 		log.Debug(addr.Hex())
 		log.Debug("receive ready from invalid sender")
@@ -633,6 +635,8 @@ func (cm *ConsensusManager) AddReady(ready *btypes.Ready) {
 		cm.readyValidators[addr] = struct{}{}
 		cm.writeMapMu.Unlock()
 	}
+	*/
+	fmt.Println("IN AddReady !!")
 }
 
 func (cm *ConsensusManager) AddVote(v *btypes.Vote) bool {
@@ -641,12 +645,15 @@ func (cm *ConsensusManager) AddVote(v *btypes.Vote) bool {
 		log.Debug("cm addvote error")
 		return false
 	}
-	addr, _ := v.From()
+	//addr, _ := v.From()
+	//fmt.Println("IN addvote addr=",addr)
+	/*
 	if _, ok := cm.readyValidators[addr]; !ok {
 		cm.writeMapMu.Lock()
 		cm.readyValidators[addr] = struct{}{}
 		cm.writeMapMu.Unlock()
 	}
+	*/
 	if v.Height > cm.Height() {
 		log.Debug("received v.H > self.H trying to sync lockset")
 		cm.synchronizer.request(cm.Height(), v.Height)
@@ -654,7 +661,7 @@ func (cm *ConsensusManager) AddVote(v *btypes.Vote) bool {
 	cm.getHeightMu.Lock()
 	h := cm.getHeightManager(v.Height)
 	success := h.addVote(v)
-	log.Info("addVote to ", "height", v.Height, "round", v.Round, "from", addr, "success", success, "cm.coinbase", cm.coinbase)
+	//log.Info("addVote to ", "height", v.Height, "round", v.Round, "from", addr, "success", success, "cm.coinbase", cm.coinbase)
 
 	cm.getHeightMu.Unlock()
 	return success
@@ -722,20 +729,23 @@ fmt.Println("------------in voteMsig---------------")
 	if p == nil {
 		panic("nil peer in cm AddProposal")
 	}
-	addr, err := p.From()
+	/*addr, err := p.From()
 	if err != nil {
 		log.Info("proposal sender error ", "err", err)
 		return false
 	}
+	*/
 	if !cm.contract.isProposer(p) {
 		log.Info("proposal sender invalid", cm.contract.isProposer(p))
 		return false
 	}
+	/*
 	if _, ok := cm.readyValidators[addr]; !ok {
 		cm.writeMapMu.Lock()
 		cm.readyValidators[addr] = struct{}{}
 		cm.writeMapMu.Unlock()
 	}
+	*/
 	ls := p.LockSet()
 	if !ls.IsValid() && ls.EligibleVotesNum != 0 {
 		log.Info("proposal lockset invalid")
