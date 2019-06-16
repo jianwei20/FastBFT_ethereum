@@ -1,7 +1,7 @@
 - hosts: geth-nodes
   tasks:
     - name: git pull.
-      command: bash /home/ubuntu/FastBFT_ethereum/experiment/connect.sh
+      command: bash /home/ubuntu/FastBFT_ethereum/experiment/connect.sh  "{{total}}"
       args:
           chdir: /home/ubuntu/FastBFT_ethereum/experiment
       register: shell_result
