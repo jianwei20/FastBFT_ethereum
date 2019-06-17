@@ -240,11 +240,10 @@ func (cm *ConsensusManager) Round() uint64 {
 }
 
 func (cm *ConsensusManager) getHeightManager(h uint64) *HeightManager {
-	cm.getHeightMu.Lock()
+	cm.writeMapMu.Lock()
+	defer cm.writeMapMu.Unlock()
 	if _, ok := cm.heights[h]; !ok {
-		cm.heights[h] = NewHeightManager(cm, h)
-	}
-	cm.getHeightMu.Unlock()
+		cm.heights[h] = NewHeightManager(cm, h)	
 	return cm.heights[h]
 }
 
