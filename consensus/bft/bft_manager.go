@@ -64,7 +64,7 @@ msigProposers[j]=cc.validators[i]
 j++
 }else{
 fmt.Println("NO")
-}	
+}
 }
 
 /*
@@ -73,7 +73,7 @@ fmt.Println("NO")
 a:=2
 
 j:=0
-for i:=0;i<len(s);i++{ 
+for i:=0;i<len(s);i++{
 
 if((a!=s[i])&&(j<3)){
 p[j]=s[i]
@@ -181,6 +181,7 @@ type ConsensusManager struct {
 	uncleMu     sync.Mutex
 	writeMapMu  sync.RWMutex
 	getHeightMu sync.RWMutex
+	temp           sync.RWMutex
 
 	processMu sync.Mutex
 
@@ -209,6 +210,7 @@ func NewConsensusManager(manager *ProtocolManager, chain *core.BlockChain, db et
 		coinbase:           cc.coinbase,
 		Enable:             true,
 		getHeightMu:        sync.RWMutex{},
+		temp:					sync.RWMutex{},
 	}
 
 	cm.initializeLocksets()
@@ -231,21 +233,34 @@ func (cm *ConsensusManager) Now() int64 {
 }
 
 func (cm *ConsensusManager) Height() uint64 {
+	
 	h := cm.chain.CurrentBlock().NumberU64()
 	return h + 1
 }
 
 func (cm *ConsensusManager) Round() uint64 {
+
 	return cm.getHeightManager(cm.Height()).Round()
+
 }
 
 func (cm *ConsensusManager) getHeightManager(h uint64) *HeightManager {
+<<<<<<< HEAD
+	cm.temp.Lock()
+	defer cm.temp.Unlock()
+
+=======
 	cm.currentMu.Lock()
 	defer cm.currentMu.Unlock()
 	
+>>>>>>> 1999ab9f3cfbe31b8f74ada26d5413a4271edc09
 	if _, ok := cm.heights[h]; !ok {
 		cm.heights[h] = NewHeightManager(cm, h)	
 	}
+<<<<<<< HEAD
+
+=======
+>>>>>>> 1999ab9f3cfbe31b8f74ada26d5413a4271edc09
 	return cm.heights[h]
 }
 
@@ -674,7 +689,7 @@ func (cm *ConsensusManager) AddMsigProposal(mp btypes.Proposal, peer *peer) bool
 	// 1. block hasValid sig
 	// 2. push block into blockCandidates without msig
 	//log.Debug("--------------in AddMsigProposal----------------")
-	
+
 	log.Info("----------------------in AddMsigProposal--------------------------")
 	addr, err := mp.From()
 	if err != nil {
